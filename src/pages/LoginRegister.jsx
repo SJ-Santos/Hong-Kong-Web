@@ -1,6 +1,6 @@
 import React, { useState } from "react";
  // Estilos globais
-import "./styles/LoginRegister.css";
+import "./styles/LoginRegister_styles.css";
 // Importando os ícones diretamente refazer os imports de imgens
 import HONG from "./assets/icons/HONG.svg";
 import KONG from "./assets/icons/KONG.svg";
