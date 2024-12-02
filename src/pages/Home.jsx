@@ -5,16 +5,16 @@ import Sobrenos from './components/AboutUs';
 import './styles/Home_styles.css';// Importe o CSS que você usava
 
 //*****************importar as imagens*********************** refazer todos os imports  qnd colocar as imagens
-import Yaksoba from './assets/img/plate_img/Yaksoba-removebg-preview.png'
-import YaksobaFundo from './assets/img/plate_img/Yaksoba_com_fundo.jpeg'
-import carne from './assets/img/plate_img/chopsuey_com_arroz.jpeg'
-import aparmegiana from './assets/img/plate_img/aparmegiana_com_macarrao.jpeg'
-import frango from './assets/img/plate_img/bolinho_de_frango_arroz_e_batata.jpeg'
-import yakFritas from './assets/img/plate_img/Chopsuey_com_batata.jpeg'
-import bifum from './assets/img/plate_img/Bifum _de_camarão.jpeg'
-import camarao from './assets/img/plate_img/Camarao_com_arroz.jpeg'
-import xadrez from './assets/img/plate_img/Frango_xadrez_com_arroz.jpeg'
-import empanado from './assets/img/plate_img/Bolinhos_de_frango_com_arroz.jpeg'
+import Yaksoba from './assets/imgs/plate_img/Yaksoba.png'
+import YaksobaFundo from './assets/imgs/plate_img/Yaksoba_com_fundo.jpeg'
+import carne from './assets/imgs/plate_img/chopsuey_com_arroz.jpeg'
+import aparmegiana from './assets/imgs/plate_img/aparmegiana_com_macarrao.jpeg'
+import frango from './assets/imgs/plate_img/bolinho_de_frango_arroz_e_batata.jpeg'
+import yakFritas from './assets/imgs/plate_img/Chopsuey_com_batata.jpeg'
+import bifum from './assets/imgs/plate_img/Bifum _de_camarão.jpeg'
+import camarao from './assets/imgs/plate_img/Camarao_com_arroz.jpeg'
+import xadrez from './assets/imgs/plate_img/Frango_xadrez_com_arroz.jpeg'
+import empanado from './assets/imgs/plate_img/Bolinhos_de_frango_com_arroz.jpeg'
 function Home() {
 
   return (
@@ -101,4 +101,4 @@ function Home() {
   );
 }
 
-export default App;
+export default Home;
