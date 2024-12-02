@@ -1,0 +1,56 @@
+#cart{
+    width: 50px;
+    height: 47px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color:#FFF3F3 ;
+    transition: background-color .3s ease;
+    
+}
+#cart:hover{
+
+    background-color:#ded3d3 ;
+    
+}
+#login-btn{
+    width: 118px;
+    height: 47px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px ;
+    font-weight: 600;
+    background-color: transparent;
+    border: solid 3px white;
+    transition: background-color .3s ease;
+}
+#login-btn:hover{
+    color:#C12F28;
+    background-color: white;
+   
+}
+#order{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 32px;
+    background-color: #C12F28;
+    padding: 8px 6%;
+    border-radius:20px;
+
+}
+
+#order:hover{
+    background-color: #a82b25;
+    cursor: pointer;
+}
+
+#order:active{
+    
+    background-color: #8a221c;
+    cursor: pointer;
+}

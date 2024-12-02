@@ -1,0 +1,455 @@
+html, body {
+    width: 100vw; 
+    height: 100vh; 
+   overflow: show;
+}
+
+body {
+   height: 0px;
+   width: 1550px;
+   top: 5748px;
+   left: -2486px;
+   background-image: linear-gradient(to top ,#E63229 ,#FFA9A9);
+
+}
+.container-tela {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Para evitar rolagens */
+}
+
+
+.header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; 
+}
+
+.logo {
+    width: 150px;
+    height: 40px;
+    top: 36px;
+    left: 109.32px;
+    margin-left: -10px;
+    margin-right: 1rem;
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(241, 212, 212, 0.3);
+    backdrop-filter: blur(50px); 
+    z-index: -1;
+}
+.header::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent );
+    transition: .5s;
+
+}
+.header:hover::after{
+    left: 100%;
+}
+.logo{
+    font-size: 45px;
+    color:ghostwhite ;
+    text-decoration: none;
+    font-weight: 700;
+}
+.icons{
+    position: absolute;
+    right: 0;
+    font-size: 2.8rem;
+    color: ghostwhite;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar a {
+    position: relative;
+    margin-left: 12px;
+    font-size : 1.15rem;
+    color: ghostwhite;
+    font-weight: 500;
+    margin-left: 2.8rem;
+    text-decoration: none;
+    
+}
+
+#check{
+    display: none;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top:100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: ghostwhite;
+    transition: 0.3s;
+
+}
+
+.navbar a:hover::before{
+    width: 100%;
+}
+
+
+.container-registro{
+    width: 452px;
+    min-height: 578px;
+    top: 90px;
+    left: 120px;
+    position: absolute;
+    gap: 40px;
+    opacity: 1;
+    background-color: #FCFCFC;
+    margin-left: 15px;
+    margin-right: 190px;
+    border-radius: 20px;
+    display: flex;
+    justify-content:top; 
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 25px;
+    z-index: 0;
+}
+.registre-se{
+    font-size: 36px; 
+    color: #C12F28;
+    width: auto; 
+    height: auto; 
+    top: 231px;
+    left: 1029px;
+}
+.registro{
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+.nome-sobrenome{
+display: flex;
+flex-direction: row;
+}
+.senha-confirmarsenha{
+display: flex;
+flex-direction: row;
+}
+.nome-sobrenome input{
+    width: 95%;
+    height: 33px;     
+    padding: 10px;    
+    font-size: 16px;  
+    border-radius: 10px;
+    border-color: #A4A3A3;
+    background-color: #FCFCFC;
+}
+.nome-sobrenome label{
+    color: #5A5A5A;
+    background-color: #FCFCFC;
+}
+.senharegistro input{
+    width: 95%;
+    height: 33px;     
+    padding: 10px;    
+    font-size: 16px;  
+    border-radius: 10px;
+    border-color: #A4A3A3;
+    background-color: #FCFCFC;
+}
+.senharegistro label{
+    color: #5A5A5A;
+}
+.email-registro{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 50px;
+    gap:6px;
+}
+.email-registro label{
+  color:#5A5A5A;
+}
+.email-registro input{
+    width: 97.3%;      
+    height: 33px;     
+    padding: 10px;    
+    font-size: 16px; 
+    border-radius: 10px;
+    border-color: #A4A3A3;
+    background-color: #FCFCFC;
+}
+.numero input {
+    display: flex;
+    flex-direction: column;
+    width: 97.3%;
+    height: 35px;
+    border-radius: 10px;
+    gap:6px;
+    background-color: #FCFCFC;
+}
+.numero label{
+    color: #5A5A5A;
+}
+
+
+.container-login{
+    width: 430px;
+    min-height: 530px;
+    top: 130px;
+    left: 820px;
+    position: absolute;
+    gap: 30px;
+    opacity: 1;
+    background-color: #FCFCFC;
+    margin-left: 150px;
+    margin-right: px;
+    border-radius: 20px;
+    display: flex;
+    justify-content:top; 
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 25px;
+    z-index: 2;;
+}
+.Entrar{
+    font-size:36px;
+    color: #C12F28;
+    width: 112px;
+    height: 54px;
+    top: 231px;
+    left: 1029px;
+    
+}
+.email{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 50px;
+    gap:6px;
+    
+}
+.senha{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 50px;
+    gap :6px;
+}
+.senha input {
+    width: 100%;      
+    height: 33px;     
+    padding: 10px;    
+    font-size: 16px;  
+    border-radius: 10px;
+    border-color: #A4A3A3;
+    background-color: #FCFCFC;
+}
+.email input{
+    width: 100%;      
+    height: 33px;     
+    padding: 10px;    
+    font-size: 16px; 
+    border-radius: 10px;
+    border-color: #A4A3A3;
+    background-color: #FCFCFC;
+}
+.senha label{
+    color: #5A5A5A;
+}
+.email label{
+    color: #5A5A5A;
+}
+.lembre{
+    display: flex;
+    align-items: center;
+    gap:40px
+
+}
+.lembrar label{
+    color: #5A5A5A;
+}
+.lembrar{
+    margin-right: 70px;
+}
+
+#button-entrar{
+    background-image: linear-gradient(#C12F28,#E16868 );
+    position: flex;
+    width: 400px;
+    height: 53.37px;
+    top: 605px;
+    left: 865px;
+    color: #FCFCFC;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+
+#button-registrar-se{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    width: 400px;
+    height: 53.37px;
+    top: 605px;
+    left: 865px;
+    color: #C12F28;
+    background-color: #FCFCFC; 
+    border: 2px solid #C12F28; 
+    border-radius: 20px; 
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+#registerToggle:checked ~ .container-login {
+   display: none;
+}
+#esqueceu{
+    color: #464040;
+    font-size: 14px;
+    font-weight: Medium;
+}
+#lembrar-senha{
+    color: #464040;
+    font-size: 13px;
+    font-weight: Medium;
+}
+.imagem-div {
+  position: absolute;
+  z-index: 3;
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%); /* Compensa o deslocamento */
+  transition: transform 0.8s ease-in-out, left 0.8s ease-in-out;
+  
+}
+
+.imagem-esquerda {
+  left: 5%; /* Posição quando a tela de login está visível */
+}
+
+.imagem-direita {
+  left: calc(95% - 600px); /* Posição quando a tela de registro está visível (ajuste se necessário) */
+}
+
+.imagem {
+  width: 1000px; /* Ajuste o tamanho da imagem */
+  height: 1200px;
+  position: relative;
+  left: -150px;
+  
+}
+
+
+
+.container-email-senha{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+
+}
+.linha-com-texto {
+    display: flex;
+    align-items: center;  /* Alinha o texto verticalmente */
+    width: 100%;           /* A linha ocupa toda a largura */
+}
+
+.linha-com-texto::before {
+    content: '';          /* Cria a parte inicial da linha */
+    flex: 0 0 44.7%;        /* A linha ocupa 10% do espaço (pode ser ajustado) */
+    border-top: 2.5px solid #c12f28; /* A linha vermelha */
+}
+
+.linha-com-texto span {
+    padding: 0 10px;      /* Espaçamento entre a linha e o texto */
+    font-weight: bold;    /* Deixa o texto em negrito */
+    color: #c12f28;           /* Cor do texto */
+    background-color: #ffffff; /* Fundo branco para esconder a linha no meio */
+    font-size: 15px;
+}
+
+.linha-com-texto::after {
+    content: '';          /* Cria a parte que continua após o texto */
+    flex: 1;              /* A linha vai preencher o restante do espaço */
+    border-top: 2.5px solid #c12f28; /* A linha vermelha */
+}
+/* BREAKPOINTS */
+
+@media (mmax-width: 992px) {
+    .header {
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width : 768px){
+    .icons{
+        display: inline-flex;
+    }
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+    .icons #x-icon{
+        display: none;
+    }
+    #check:checked~.icons #x-icon{
+        display: block;
+    }
+    
+
+    .navbar{
+        position: absolute;
+        top :100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(241, 212, 212, 0.3);
+        backdrop-filter: blur(50px);
+        box-shadow: 0.5rem 1rem rgba(0, 0, 0, .2);
+        overflow: hidden;
+        transition: .3s ease ;
+    }
+    #check:checked~.navbar{
+        height: 17.7rem;
+    }
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5 rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+    #check:checked~.navbar a{
+       transform: translateY(0); 
+       opacity: 1;
+       transition-delay: calc(.15s * var(--i));
+    }
+}

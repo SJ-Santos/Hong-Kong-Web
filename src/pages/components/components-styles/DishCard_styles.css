@@ -1,0 +1,100 @@
+#line{
+   
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+}
+
+#l1{
+    background-color: #C12F28;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    z-index: -1;
+}
+#line h1{
+    background-color:#FFF3F3 ;
+    padding: 0px 1%;
+    color: #C12F28;
+    font-size: 64px;
+    font-weight: 600;
+    font-family: "Palanquin Dark";
+    margin-left: 70px;
+}
+
+#l2{
+    background-color: #C12F28;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    left: 0;
+    z-index: -1;
+   
+}
+#dishes{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    gap:100px;
+
+}
+.dishes-all{
+    background-color: white;
+
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+     gap: 20px;
+     width: 300px;
+     height: 420px;
+     padding: 15px;
+     border-radius: 10px;
+     box-shadow: 3px 3px 5px rgb(141, 141, 141);
+     
+}
+
+#dish_photo{
+    height: 200px;
+    width: 100%;
+    padding: 0px 10px;
+    border-radius: 20px;
+    
+    }
+#choice_size{
+    display: flex;
+    gap: 10px;
+}
+.dishes-all h3{
+ font-size: 16px;
+ font-weight: 500;
+ color: #C12F28;
+
+}
+.dishes-all p{
+    font-size: 12px;
+    font-weight: 500;
+    color: #C12F28;
+    
+}
+.dishes-all button {
+    outline: none;
+    padding: 3px;
+    border: none;
+    color: white;
+    width:40%;
+    background-color:#C12F28 ;
+    border-radius: 5px;
+    
+}
+.dishes-all button:hover{
+    background-color: #a82a23;
+    cursor: pointer;
+}
+.dishes-all button:active{
+    cursor: pointer;
+    background-color: #8d221d;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
