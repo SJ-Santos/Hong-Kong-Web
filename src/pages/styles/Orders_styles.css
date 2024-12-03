@@ -12,20 +12,51 @@ body {
     gap: 25px;
     padding: 25px;
     justify-content: center;
+  
 }
 
 .card {
+    margin-right: 10%;
+    position: relative;
+
     display: flex;
+    flex-wrap:nowrap;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width:45%;
     height: 30%;
-    padding: 4%;
+    padding: 2%;
+    padding-bottom: 4%;
     padding-top: 2%;
-    padding-left: 2%;
 }
-
+#remove {
+    position: absolute;
+    top: 9%;
+    right: 5%;
+    width: 28px; /* Largura do botão */
+    height: 28px; /* Altura do botão (tornando-o quadrado) */
+    background-color: #C12F28; /* Cor de fundo vermelha */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Borda arredondada, opcional */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Tamanho do X */
+    color: white; /* Cor do X */
+    cursor: pointer; /* Aparece um cursor de pointer */
+    transition: background-color 0.3s ease; /* Transição para o hover */
+  }
+  
+  #remove:hover {
+    background-color:#a83232; /* Cor de fundo quando o mouse passa por cima */
+  }
+  
+  #remove span {
+    font-weight: bold;
+    border-radius: 100%;
+  }
+  
 
 .image img {
     margin-top: 5%;
@@ -38,18 +69,18 @@ body {
 .info {
     margin-left: 20px;
     color: #a83232;
-    width: 200%;
+    width: 170%;
 }
 
 .info h2 {
     font-size: 18px;
     margin-bottom: 5px;
+    width: 70%;
+}
+#portion{
+    margin-bottom: 25px;
 }
 
-.info p {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
 
 .quantity-price {
     display: flex;
@@ -86,12 +117,25 @@ body {
 
 .price {
     font-size: 18px;
+    font-weight: 600;
     color: #a83232;
 }
 
 .observation {
     padding: 5px;
-    font-size: 12px;
+}
+.obsTitle{
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.observation textarea{
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border: 2px solid #C12F28;
+    border-radius: 5px;
+    outline: none;
 }
 
 .actions {

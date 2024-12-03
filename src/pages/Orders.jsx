@@ -19,12 +19,17 @@ const Orders = () => {
      <Header></Header>
       <div className="container">
         <div className="card">
+          <button id="remove">
+          <span>&times;</span>
+          </button>
+
           <div className="image">
             <img src={CamaraoComArroz} alt="Camarões ao molho de tomate" />
           </div>
+
           <div className="info">
             <h2>Camarões ao molho de tomate</h2>
-            <p>Porção individual</p>
+            <p id='portion'>Porção individual</p>
             <div className="quantity-price">
               <div className="quantity">
                 <button onClick={decreaseQuantity}>-</button>
@@ -34,8 +39,8 @@ const Orders = () => {
               <div className="price">R$ 00,00 </div>
             </div>
             <div className="observation">
-              <p><strong>Observação:</strong></p>
-              <p>Coloque aqui sua observação especial, permitida no pedido de pratos.</p>
+              <p className='obsTitle'>Observação:</p>
+              <textarea name="obsOrder" id="obsOrder"></textarea>
             </div>
           </div>
         </div>
