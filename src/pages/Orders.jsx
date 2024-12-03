@@ -3,11 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import './styles/Orders_styles.css';
 import './components/components-styles/Header_styles.css';
 import './components/components-styles/btn.css';
-import Hong from './assets/icons/HONG.svg'
-import Kong from './assets/icons/KONG.svg'
-import redCart from './assets/icons/red cart.svg'
 import CamaraoComArroz from './assets/imgs/plate_img/Camarao_com_arroz.jpeg'
-import search from './assets/icons/search.svg'
+import Header from './components/Header';
 
 const Orders = () => {
   const navigate = useNavigate();
@@ -19,36 +16,7 @@ const Orders = () => {
 
   return (
     <div>
-      <header>
-        <nav id="nav_bar">
-          <div id="logo">
-            <img src={Hong} alt="Hong" />
-            <img src={Kong} alt="Kong" />
-          </div>
-          <ul id="nav_list">
-            <li className="nav-items">
-              <a href="#menu">Cardápio</a>
-            </li>
-            <li className="nav-items">
-              <a href="#contact">Contato</a>
-            </li>
-            <li className="nav-items">
-              <a href="#about">Sobre nós</a>
-            </li>
-          </ul>
-          <div id="shortcuts">
-            <span id="search-bar">
-              <input id="search" type="text" placeholder="Pesquisa" />
-              <img src="/assets/icons/search.svg" alt="Buscar" />
-            </span>
-            <button id="cart">
-              <img src={redCart} alt="Carrinho" />
-            </button>
-            <button id="login-btn" onClick={goToLogin}>Entrar</button>
-          </div>
-        </nav>
-      </header>
-
+     <Header></Header>
       <div className="container">
         <div className="card">
           <div className="image">
@@ -63,7 +31,7 @@ const Orders = () => {
                 <span>{quantity}</span>
                 <button onClick={increaseQuantity}>+</button>
               </div>
-              <div className="price">R$ 00,00</div>
+              <div className="price">R$ 00,00 </div>
             </div>
             <div className="observation">
               <p><strong>Observação:</strong></p>
