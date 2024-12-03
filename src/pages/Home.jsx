@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import DishCard from './components/DishCard';
 import Sobrenos from './components/AboutUs';
+import { useNavigate } from 'react-router-dom';
 import './styles/Home_styles.css';// Importe o CSS que você usava
 
 //*****************importar as imagens*********************** refazer todos os imports  qnd colocar as imagens
@@ -16,6 +17,8 @@ import camarao from './assets/imgs/plate_img/Camarao_com_arroz.jpeg'
 import xadrez from './assets/imgs/plate_img/Frango_xadrez_com_arroz.jpeg'
 import empanado from './assets/imgs/plate_img/Bolinhos_de_frango_com_arroz.jpeg'
 function Home() {
+  
+  
 
   return (
     <div>

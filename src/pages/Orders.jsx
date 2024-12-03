@@ -1,24 +1,29 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; 
 import './styles/Orders_styles.css';
 import './components/components-styles/Header_styles.css';
 import './components/components-styles/btn.css';
+import Hong from './assets/icons/HONG.svg'
+import Kong from './assets/icons/KONG.svg'
+import redCart from './assets/icons/red cart.svg'
+import CamaraoComArroz from './assets/imgs/plate_img/Camarao_com_arroz.jpeg'
+import search from './assets/icons/search.svg'
 
-const Pedidos = () => {
-  const history = useHistory();
+const Orders = () => {
+  const navigate = useNavigate();
   const [quantity, setQuantity] = useState(1);
 
   const increaseQuantity = () => setQuantity(quantity + 1);
-  const decreaseQuantity = () => setQuantity(quantity - 1);
-  const goToLogin = () => history.push('/pages/LoginRegister');
- //refazer imports 
+  const decreaseQuantity = () => setQuantity(quantity > 1 ? quantity - 1 : 1); // Evita valores negativos
+  const goToLogin = () => navigate('/LoginRegister'); // Corrigido
+
   return (
     <div>
       <header>
         <nav id="nav_bar">
           <div id="logo">
-            <img src="/assets/icons/HONG.svg" alt="Hong" />
-            <img src="/assets/icons/KONG.svg" alt="Kong" />
+            <img src={Hong} alt="Hong" />
+            <img src={Kong} alt="Kong" />
           </div>
           <ul id="nav_list">
             <li className="nav-items">
@@ -37,7 +42,7 @@ const Pedidos = () => {
               <img src="/assets/icons/search.svg" alt="Buscar" />
             </span>
             <button id="cart">
-              <img src="/assets/icons/red cart.svg" alt="Carrinho" />
+              <img src={redCart} alt="Carrinho" />
             </button>
             <button id="login-btn" onClick={goToLogin}>Entrar</button>
           </div>
@@ -47,7 +52,7 @@ const Pedidos = () => {
       <div className="container">
         <div className="card">
           <div className="image">
-            <img src="/assets/img/plate_img/Camarao_com_arroz.jpeg" alt="Camarões ao molho de tomate" />
+            <img src={CamaraoComArroz} alt="Camarões ao molho de tomate" />
           </div>
           <div className="info">
             <h2>Camarões ao molho de tomate</h2>
@@ -99,4 +104,4 @@ const Pedidos = () => {
   );
 };
 
-export default Pedidos;
+export default Orders;
