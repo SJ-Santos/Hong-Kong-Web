@@ -4,10 +4,14 @@ import "./styles/LoginRegister_styles.css";
 // Importando os ícones diretamente refazer os imports de imgens
 import HONG from "./assets/icons/HONG.svg";
 import KONG from "./assets/icons/KONG.svg";
-import yakisoba from "./assets/icons/yakisobaAnimation.svg"
+import yakisoba from "./assets/icons/yakisoba_animation.svg"
+import { useNavigate } from "react-router-dom";
+
+
 
 const LoginRegister = () => {
-  const [showRegister, setShowRegister] = useState(false); // Alternar entre login e registro
+  const [showRegister, setShowRegister] = useState(false); 
+  
 
   return (
     <div className="container-tela">
@@ -97,8 +101,12 @@ const RegisterForm = ({ setShowRegister }) => (
 );
 
 // Componente de formulário de login
-const LoginForm = ({ setShowRegister }) => (
-  <div className="container-login">
+const LoginForm = ({ setShowRegister }) =>{
+  const navigate = useNavigate();
+  const GoToHome =() =>{
+    navigate("/");
+  };
+  return(<div className="container-login">
     <h2 className="Entrar">Entrar</h2>
     <div className="container-email-senha">
       <div className="email">
@@ -121,7 +129,7 @@ const LoginForm = ({ setShowRegister }) => (
       </a>
     </div>
 
-    <button id="button-entrar">Entrar</button>
+    <button id="button-entrar" onClick={GoToHome} >Entrar</button>
 
     <div className="linha-com-texto">
       <span>ou</span>
@@ -130,7 +138,9 @@ const LoginForm = ({ setShowRegister }) => (
     <button id="button-registrar-se" onClick={() => setShowRegister(true)}>
       Registre-se
     </button>
-  </div>
-);
+  </div>);
+} 
+  
+;
 
 export default LoginRegister;
