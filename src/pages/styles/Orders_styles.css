@@ -1,0 +1,255 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe6e6;
+    padding-top: 60px;
+}
+
+.container {
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+}
+
+.card {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 650px;
+    height: 348px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-top : 40px;
+   
+}
+
+.image img {
+    width: 238px;
+    height: 230px;
+    border-radius: 10px;
+}
+
+.info {
+    margin-left: 10px;
+    color: #C12F28;
+}
+
+.info h2 {
+    width: 268px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.quantity-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity button {
+    background-color: #C12F28;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 8px;
+    cursor: pointer;
+    position: relative;
+  
+}
+
+.quantity button div {
+    
+}
+
+
+
+.price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #C12F28;
+}
+
+.observation {
+  margin-top: 20px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.actions button {
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-summary {
+    background-image: linear-gradient(#C12F28,#E16868 );
+    position: flex;
+    width: 400px;
+    height: 53.37px;
+    top: 605px;
+    left: 865px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+}
+
+.finish-summary {
+    background-color: #ffd966;
+    position: flex;
+    width: 400px;
+    height: 53.37px;
+    top: 605px;
+    left: 865px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 23px;
+    padding-top: 12px;
+    text-align: center;
+}
+
+details > div {
+    width: 20em;
+    border: 2px solid black;
+    padding: 1em 2em;
+    position: fixed;
+    width: 360px;
+    height: 240px;
+    top: 300px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: white;
+    z-index: 3;
+    box-shadow: 10px 10px 10px DIMGRAY;
+}
+  
+details[open] summary::after { 
+    content: "×"; 
+    font-size: 28pt;  
+    position: fixed; 
+    right: calc(50vw - 360px / 2 - 2em); 
+    top:  calc(50vh - 240px / 2 - 2em);
+    padding: 5pt 10pt;
+    z-index: 9;
+}
+  
+details[open] summary::before {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.login-summary summary {
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.login-message {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+.finish-message{
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 70px;
+}
+
+.login-message p {
+    color: #a83232;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.finish-message p {
+    color: #a83232;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.login-button,
+.register-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    border-radius: 20px;
+    border: #C12F28;
+}
+
+.login-button {
+    background-image: linear-gradient(#C12F28,#E16868 );
+    background-color: #a83232;
+    color: white;
+}
+
+.register-button {
+    background-color: transparent;
+    color: #a83232;
+    border: 1px solid #a83232;
+    margin-top: 10px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    color: #a83232;
+    font-weight: bold;
+}
+
+.divider span {
+    width: 40px;
+    height: 1px;
+    background-color: #a83232;
+    margin: 0 5px;
+}
