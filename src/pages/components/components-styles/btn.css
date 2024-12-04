@@ -8,13 +8,8 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background-color:#FFF3F3 ;
+    background-color:#FFFFFF ;
     transition: background-color .3s ease;
-    
-}
-#cart:hover{
-
-    background-color:#ded3d3 ;
     
 }
 #login-btn{

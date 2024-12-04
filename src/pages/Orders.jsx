@@ -3,6 +3,11 @@ import { useHistory } from 'react-router-dom';
 import './styles/Orders_styles.css';
 import './components/components-styles/Header_styles.css';
 import './components/components-styles/btn.css';
+<<<<<<< HEAD
+=======
+import CamaraoComArroz from './assets/imgs/plate_img/Camarao_com_arroz.jpeg'
+import Header from './components/Header';
+>>>>>>> Home
 
 const Pedidos = () => {
   const history = useHistory();
@@ -14,6 +19,7 @@ const Pedidos = () => {
  //refazer imports 
   return (
     <div>
+<<<<<<< HEAD
       <header>
         <nav id="nav_bar">
           <div id="logo">
@@ -44,42 +50,47 @@ const Pedidos = () => {
         </nav>
       </header>
 
+=======
+     <Header></Header>
+>>>>>>> Home
       <div className="container">
         <div className="card">
+          <button id="remove">
+          <span>&times;</span>
+          </button>
+
           <div className="image">
             <img src="/assets/img/plate_img/Camarao_com_arroz.jpeg" alt="Camarões ao molho de tomate" />
           </div>
+
           <div className="info">
             <h2>Camarões ao molho de tomate</h2>
-            <p>Porção individual</p>
+            <p id='portion'>Porção individual</p>
             <div className="quantity-price">
               <div className="quantity">
                 <button ><div>-</div></button>
                 <span>{}</span>
                 <button ><div>+</div></button>
               </div>
-              <div className="price">R$ 00,00</div>
+              <div className="price">R$ 00,00 </div>
             </div>
             <div className="observation">
+<<<<<<< HEAD
               <p><strong>Observação:</strong></p>
               <input type="text" placeholder='Coloque a observação aqui'/>
+=======
+              <p className='obsTitle'>Observação:</p>
+              <textarea name="obsOrder" id="obsOrder"></textarea>
+>>>>>>> Home
             </div>
           </div>
         </div>
 
         <div className="actions">
-          <details className="login-summary">
-            <summary>✔️ Finalizar Pedido</summary>
-            <div className="login-message">
-              <p>Ops! Para finalizar o seu pedido, você deve entrar na sua conta!</p>
-              <button className="login-button">Entre na sua conta</button>
-              <div className="divider">
-                <span></span> ou <span></span>
+          <div><img src="" alt="" />
+                  <h2>Finalizar pedido</h2>
+                
               </div>
-              <button className="register-button">Registre-se agora mesmo</button>
-            </div>
-          </details>
-
           <p>ou</p>
 
           <details className="finish-summary">
