@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './components-styles/DishCard_styles.css';
 
 //*********image************** */
-import  carrinho from '../assets/icons/white cart.svg'
+import  carrinho from '../assets/icons/whiteCart.svg'
 function DishCard({ image, name, cost }) {
   
  
