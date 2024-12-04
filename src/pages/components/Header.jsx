@@ -12,22 +12,23 @@ function Header() {
     navigate('/LoginRegister');
   };
   const GoToOrders = () =>{navigate('/Orders');};
+  const GoToHome = () =>{navigate('/Home');};
   return (
     <header>
       <nav id="nav_bar">
-        <div id="logo">
+        <div id="logo" onClick={GoToHome}>
           <img src={Hong} alt="Hong" />
           <img src={Kong} alt="Kong" />
         </div>
         <ul id="nav_list">
           <li className="nav-items">
-            <a href="#menu">Cardápio</a>
+            <a href="#menu" onClick={GoToHome}>Cardápio</a>
           </li>
           <li className="nav-items">
             <a href="#contact">Contato</a>
           </li>
           <li className="nav-items">
-            <a href="#about">Sobre nós</a>
+            <a href="#about" onClick={GoToHome}>Sobre nós</a>
           </li>
         </ul>
         <div id="shortcuts">

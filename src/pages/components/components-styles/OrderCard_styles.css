@@ -1,0 +1,135 @@
+
+.container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe6e6;
+    padding-top: 60px;
+
+}
+
+.card {
+    margin-right: 10%;
+    position: relative;
+
+    display: flex;
+    flex-wrap:nowrap;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width:40%;
+    padding: 2%;
+    padding-bottom: 4%;
+    padding-top: 2%;
+}
+#remove {
+    position: absolute;
+    top: 9%;
+    right: 5%;
+    width: 28px; /* Largura do botão */
+    height: 28px; /* Altura do botão (tornando-o quadrado) */
+    background-color: #C12F28; /* Cor de fundo vermelha */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Borda arredondada, opcional */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Tamanho do X */
+    color: white; /* Cor do X */
+    cursor: pointer; /* Aparece um cursor de pointer */
+    transition: background-color 0.3s ease; /* Transição para o hover */
+  }
+  
+  #remove:hover {
+    background-color:#a83232; /* Cor de fundo quando o mouse passa por cima */
+  }
+  
+  #remove span {
+    font-weight: bold;
+    border-radius: 100%;
+  }
+  
+
+.image img {
+    margin-top: 5%;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+.info {
+    margin-left: 20px;
+    color: #a83232;
+    width: 170%;
+}
+
+.info h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    width: 70%;
+}
+#portion{
+    margin-bottom: 25px;
+}
+
+
+.quantity-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    
+}
+.quantity span{
+   background-color:#F2F2F2;
+   width: 50px;
+   height:30px;
+   border-radius: 2px;
+   text-align: center;
+   color: black;
+   font-size: 18px;
+   font-weight: 400;
+}
+.quantity button {
+    background-color: #a83232;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding-inline: 5px;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #a83232;
+}
+
+.observation {
+    padding: 5px;
+}
+.obsTitle{
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.observation textarea{
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border: 2px solid #C12F28;
+    border-radius: 5px;
+    outline: none;
+}

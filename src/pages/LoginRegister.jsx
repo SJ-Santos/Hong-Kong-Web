@@ -1,5 +1,5 @@
 import React, { useState } from "react";
- // Estilos globais
+// Estilos globais
 import "./styles/LoginRegister_styles.css";
 // Importando os ícones diretamente refazer os imports de imgens
 import HONG from "./assets/icons/HONG.svg";
@@ -10,14 +10,17 @@ import { useNavigate } from "react-router-dom";
 
 
 const LoginRegister = () => {
-  const [showRegister, setShowRegister] = useState(false); 
   
-
+  const navigate = useNavigate();
+  const [showRegister, setShowRegister] = useState(false);
+  const GoToOrders = () =>{navigate('/Orders');};
+  const GoToHome = () =>{navigate('/Home');};
   return (
     <div className="container-tela">
+      <div className="userIn">
       {/* Header */}
       <header className="header">
-        <div className="logo-container">
+        <div className="logo-container" onClick={GoToHome}>
           <img className="logo" src={HONG} alt="Hong Logo" />
           <img className="logo" src={KONG} alt="Kong Logo" />
         </div>
@@ -29,14 +32,14 @@ const LoginRegister = () => {
         </label>
 
         <nav className="navbar">
-          <a href="#" style={{ "--i": 0 }}>Cardápio</a>
+          <a href="#menu" style={{ "--i": 0 }} onClick={GoToHome}>Cardápio</a>
           <a href="#" style={{ "--i": 1 }}>Contato</a>
-          <a href="#" style={{ "--i": 2 }}>Sobre Nós</a>
+          <a href="#about" style={{ "--i": 2 } }onClick={GoToHome}>Sobre Nós</a>
         </nav>
       </header>
 
       <div className={`imagem-div ${showRegister ? "imagem-direita" : "imagem-esquerda"}`}>
-      <img className="imagem" src={yakisoba} alt="Imagem para animação" />
+        <img className="imagem" src={yakisoba} alt="Imagem para animação" />
       </div>
 
 
@@ -46,6 +49,7 @@ const LoginRegister = () => {
       ) : (
         <LoginForm setShowRegister={setShowRegister} />
       )}
+      </div>
     </div>
   );
 };
@@ -101,12 +105,12 @@ const RegisterForm = ({ setShowRegister }) => (
 );
 
 // Componente de formulário de login
-const LoginForm = ({ setShowRegister }) =>{
+const LoginForm = ({ setShowRegister }) => {
   const navigate = useNavigate();
-  const GoToHome =() =>{
+  const GoToHome = () => {
     navigate("/");
   };
-  return(<div className="container-login">
+  return (<div className="container-login">
     <h2 className="Entrar">Entrar</h2>
     <div className="container-email-senha">
       <div className="email">
@@ -139,8 +143,8 @@ const LoginForm = ({ setShowRegister }) =>{
       Registre-se
     </button>
   </div>);
-} 
-  
-;
+}
+
+  ;
 
 export default LoginRegister;

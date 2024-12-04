@@ -17,7 +17,6 @@ header{
 #logo img{
     cursor: pointer;
     margin-left: 5px;
-    position: relative;
 }
 #nav_list{
     display:flex;

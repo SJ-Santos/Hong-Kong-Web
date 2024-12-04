@@ -1,66 +1,53 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import superCorrect from'./assets/icons/superCorrect.svg'
 import './styles/Orders_styles.css';
 import './components/components-styles/Header_styles.css';
 import './components/components-styles/btn.css';
 import CamaraoComArroz from './assets/imgs/plate_img/Camarao_com_arroz.jpeg';
 import Header from './components/Header';
+import OrderCard from './components/OrderCard';
 import Correct from './assets/icons/correct.svg';
 import whiteCart from './assets/icons/whiteCart.svg';
+import './styles/Orders_styles.css'
 
-const Orders = (props) => {
-  const navigate = useNavigate();
-  const [quantity, setQuantity] = useState(1);
-
-  const increaseQuantity = () => setQuantity(quantity + 1);
-  const decreaseQuantity = () => setQuantity(quantity > 1 ? quantity - 1 : 1); // Evita valores negativos
+const Orders = () => {
+  const navigate = useNavigate(); 
   const goToLogin = () => navigate('/LoginRegister');
   const userIn = false;
   const [showText, setShowText] = useState(false);
+  const [showEnd, setShowEnd] = useState(false);
   const [color, setColor] = useState('none');
   
   const handleButton = ()=>{
-        setShowText(true)
         setColor('block')
-  }
+        if (userIn){
+          setShowEnd(true)
+        }
+        else{
+          
+        setShowText(true)
+
+        }
+        }
 const exit =()=>{
-  setShowText(false)
   setColor('none')
+  if(userIn){
+    setShowEnd(false)
+    
+  }
+  else{
+  setShowText(false)
+  }
 }
   return (
     <div>
-      <div className='overlay' style={{display:color}} onClick={exit}></div>
+      <div className='overlay' style={{display:color} } onClick={exit} ></div>
       <div >
       <Header />
         <div className="container">
         
-          <div className="card">
-            <button id="remove">
-              <span>&times;</span>
-            </button>
-
-            <div className="image">
-              <img src={CamaraoComArroz} alt="Camarões ao molho de tomate" />
-            </div>
-
-            <div className="info">
-              <h2>Camarões ao molho de tomate</h2>
-              <p id='portion'>Porção individual</p>
-              <div className="quantity-price">
-                <div className="quantity">
-                  <button onClick={decreaseQuantity}>-</button>
-                  <span>{quantity}</span>
-                  <button onClick={increaseQuantity}>+</button>
-                </div>
-                <div className="price">R$ 00,00</div>
-              </div>
-              <div className="observation">
-                <p className='obsTitle'>Observação:</p>
-                <textarea name="obsOrder" id="obsOrder"></textarea>
-              </div>
-            </div>
-          </div>
-
+           <OrderCard>  </OrderCard>
           <div className="actions">
             <button
               onClick={() => handleButton()}
@@ -99,6 +86,13 @@ const exit =()=>{
           </button>
         </div>
         }
+        {showEnd &&
+        <div className='thankYou' >
+            <p className='finished'>Pedido Finalizado!</p>
+            <img src={superCorrect} alt="Super correct" />
+            <span></span>
+            <p className='goodMeal'>Obrigado pela preferência. Tenha uma boa refeição!</p>
+        </div>}
       </div>
     </div>
   );
