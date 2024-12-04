@@ -32,9 +32,7 @@ function Header() {
         </ul>
         <div id="shortcuts">
           <button id="cart" onClick={GoToOrders}>
-            <a href="#">
-              <img src={redCart} alt="Carrinho" />
-            </a>
+          <img src={redCart} alt="Carrinho" />  
           </button>
           
           <button id="login-btn" onClick = {GoToLogin} >Entrar</button>

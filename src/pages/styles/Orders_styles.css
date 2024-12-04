@@ -156,7 +156,7 @@ body {
 }
 
 .login-summary {
-    background-image: linear-gradient(#C12F28,#E16868 );
+    background-image: linear-gradient(#E16868,#C12F28 );
     position: flex;
     width: 400px;
     height: 53.37px;

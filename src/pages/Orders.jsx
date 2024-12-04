@@ -46,18 +46,10 @@ const Orders = () => {
         </div>
 
         <div className="actions">
-          <details className="login-summary">
-            <summary>✔️ Finalizar Pedido</summary>
-            <div className="login-message">
-              <p>Ops! Para finalizar o seu pedido, você deve entrar na sua conta!</p>
-              <button className="login-button">Entre na sua conta</button>
-              <div className="divider">
-                <span></span> ou <span></span>
+          <div><img src="" alt="" />
+                  <h2>Finalizar pedido</h2>
+                
               </div>
-              <button className="register-button">Registre-se agora mesmo</button>
-            </div>
-          </details>
-
           <p>ou</p>
 
           <details className="finish-summary">
