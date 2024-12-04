@@ -69,15 +69,6 @@
 .header:hover::after{
     left: 100%;
 }
-.icons{
-    position: absolute;
-    right: 0;
-    font-size: 2.8rem;
-    color: ghostwhite;
-    cursor: pointer;
-    display: none;
-}
-
 .navbar a {
     position: relative;
     margin-left: 12px;
@@ -88,11 +79,6 @@
     text-decoration: none;
     
 }
-
-#check{
-    display: none;
-}
-
 .navbar a::before {
     content: '';
     position: absolute;
@@ -111,32 +97,26 @@
 
 
 .container-registro{
-    width: 452px;
+    width: 32%;
     min-height: 578px;
     top: 90px;
-    left: 120px;
+    left: 160px;
+    margin-top: 20px;
     position: absolute;
     gap: 40px;
-    opacity: 1;
-    background-color: #FCFCFC;
-    margin-left: 15px;
-    margin-right: 190px;
+    background-color: rgba(252, 252, 252, 0.9);
     border-radius: 20px;
     display: flex;
     justify-content:top; 
     align-items: center;
     flex-direction: column;
-    box-sizing: border-box;
     padding: 25px;
-    z-index: 0;
+    padding-left: 38px;
 }
 .registre-se{
     font-size: 36px; 
     color: #C12F28;
-    width: auto; 
-    height: auto; 
-    top: 231px;
-    left: 1029px;
+    
 }
 .registro{
 display: flex;
@@ -144,65 +124,44 @@ flex-direction: column;
 gap: 20px;
 }
 .nome-sobrenome{
+
 display: flex;
 flex-direction: row;
+font-weight: 500;
+font-size: 15px;
+gap: 10px;
 }
 .senha-confirmarsenha{
 display: flex;
 flex-direction: row;
 }
-.nome-sobrenome input{
-    width: 95%;
-    height: 33px;     
+.container-registro input, .container-email-senha input {
+    width: 93%;
+    height: 43px; 
+    border: 2px rgba(164, 163, 163 , 0.36) solid;    
     padding: 10px;    
     font-size: 16px;  
     border-radius: 10px;
-    border-color: #A4A3A3;
     background-color: #FCFCFC;
+    outline: none;
 }
-.nome-sobrenome label{
+.container-registro input::placeholder, .container-email-senha input::placeholder{
     color: #5A5A5A;
-    background-color: #FCFCFC;
+    font-weight: 400;
+    font-size: 15px;
+    opacity: 0.5;
 }
-.senharegistro input{
-    width: 95%;
-    height: 33px;     
-    padding: 10px;    
-    font-size: 16px;  
-    border-radius: 10px;
-    border-color: #A4A3A3;
-    background-color: #FCFCFC;
+.container-registro label, .container-email-senha label{
+    color: rgba(90, 90, 90,0.8);
+    font-weight: 700;
+
 }
-.senharegistro label{
-    color: #5A5A5A;
-}
-.email-registro{
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    height: 50px;
-    gap:6px;
-}
-.email-registro label{
-  color:#5A5A5A;
-}
+
 .email-registro input{
-    width: 97.3%;      
-    height: 33px;     
-    padding: 10px;    
-    font-size: 16px; 
-    border-radius: 10px;
-    border-color: #A4A3A3;
-    background-color: #FCFCFC;
+    width: 97%;     
 }
 .numero input {
-    display: flex;
-    flex-direction: column;
-    width: 97.3%;
-    height: 35px;
-    border-radius: 10px;
-    gap:6px;
-    background-color: #FCFCFC;
+    width: 97%;
 }
 .numero label{
     color: #5A5A5A;
@@ -210,33 +169,22 @@ flex-direction: row;
 
 
 .container-login{
-    width: 430px;
-    min-height: 530px;
+    width: 28%;
     top: 130px;
-    left: 820px;
+    right:  200px;
     position: absolute;
     gap: 30px;
-    opacity: 1;
-    background-color: #FCFCFC;
-    margin-left: 150px;
-    margin-right: px;
-    border-radius: 20px;
+    background-color: rgba(252, 252, 252, 0.9);
+    border-radius: 30px;
     display: flex;
     justify-content:top; 
     align-items: center;
     flex-direction: column;
-    box-sizing: border-box;
-    padding: 25px;
-    z-index: 2;;
+    padding: 35px;
 }
 .Entrar{
     font-size:36px;
-    color: #C12F28;
-    width: 112px;
-    height: 54px;
-    top: 231px;
-    left: 1029px;
-    
+    color: #C12F28;    
 }
 .email{
     display: flex;
@@ -252,42 +200,31 @@ flex-direction: row;
     width: 400px;
     height: 50px;
     gap :6px;
+    margin-top: 10px;
 }
 .senha input {
-    width: 100%;      
-    height: 33px;     
-    padding: 10px;    
-    font-size: 16px;  
-    border-radius: 10px;
-    border-color: #A4A3A3;
-    background-color: #FCFCFC;
+    width: 100%;
 }
 .email input{
-    width: 100%;      
-    height: 33px;     
-    padding: 10px;    
-    font-size: 16px; 
-    border-radius: 10px;
-    border-color: #A4A3A3;
-    background-color: #FCFCFC;
-}
-.senha label{
-    color: #5A5A5A;
-}
-.email label{
-    color: #5A5A5A;
+    width: 100%;
 }
 .lembre{
     display: flex;
     align-items: center;
-    gap:40px
+    justify-content: space-between;
+    gap:100px;
+    margin-top: 10px;
 
 }
 .lembrar label{
     color: #5A5A5A;
+    font-weight: 500;
+    margin-left: 5px;
 }
-.lembrar{
-    margin-right: 70px;
+.lembrar input{
+    position: absolute;
+    left: 40px;
+    bottom: 258px;
 }
 
 #button-entrar{
@@ -329,6 +266,10 @@ flex-direction: row;
     font-size: 14px;
     font-weight: Medium;
 }
+
+#esqueceu:hover{
+    text-decoration:underline;
+}
 #lembrar-senha{
     color: #464040;
     font-size: 13px;
@@ -338,7 +279,7 @@ flex-direction: row;
   position: absolute;
   z-index: 3;
   top: 50%; /* Centraliza verticalmente */
-  transform: translateY(-50%); /* Compensa o deslocamento */
+  right: 80%; /* Compensa o deslocamento */
   transition: transform 0.8s ease-in-out, left 0.8s ease-in-out;
   
 }

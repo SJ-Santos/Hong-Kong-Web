@@ -25,16 +25,10 @@ const LoginRegister = () => {
           <img className="logo" src={KONG} alt="Kong Logo" />
         </div>
 
-        <input type="checkbox" id="check" />
-        <label htmlFor="check" className="icons">
-          <i className="bx bx-menu" id="menu-icon"></i>
-          <i className="bx bx-x" id="x-icon"></i>
-        </label>
-
         <nav className="navbar">
-          <a href="#menu" style={{ "--i": 0 }} onClick={GoToHome}>Cardápio</a>
-          <a href="#" style={{ "--i": 1 }}>Contato</a>
-          <a href="#about" style={{ "--i": 2 } }onClick={GoToHome}>Sobre Nós</a>
+          <a href="#menu" onClick={GoToHome}>Cardápio</a>
+          <a href="#" >Contato</a>
+          <a href="#about" onClick={GoToHome}>Sobre Nós</a>
         </nav>
       </header>
 
