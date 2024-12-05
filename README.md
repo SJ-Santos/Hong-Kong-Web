@@ -33,7 +33,7 @@ Abaixo estão listadas as principais funcionalidades disponíveis:
 ### 3. Página de Login 
 - **Campos**:
   - Email e senha.
-- **Botão "Entrar"**: Redireciona o usuári para a página principal ou para a finalização do seu pedido.
+- **Botão "Entrar"**: Redireciona o usuário para a página principal ou para a finalização do seu pedido.
 
 ### 4. Página de Registro 
 - **Campos**:
