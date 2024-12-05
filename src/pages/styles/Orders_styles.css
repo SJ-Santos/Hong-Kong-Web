@@ -1,15 +1,33 @@
+
     .container {
         display: flex;
-        gap: 25px;
-        justify-content: center;
-    
-    }
+        flex-direction: column;
+        height: 100vh;
 
+    }
+    .total{
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        width:40%;
+        padding: 2%;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        color: #C12F28;
+
+        
+       
+    }
+    .totalPrice{
+        margin-right: 2%;
+    }
     .actions {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
+        margin-left: 1%;
         gap: 18px;
     }
     .overlay{

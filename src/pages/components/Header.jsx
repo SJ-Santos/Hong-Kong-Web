@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Kong from '../assets/icons/KONG.svg'
 import redCart from '../assets/icons/red cart.svg'
 function Header({orders}) {
-
+  console.log(orders)
   const navigate = useNavigate();
   const GoToLogin = () =>{
     navigate('/LoginRegister');
@@ -33,7 +33,9 @@ function Header({orders}) {
         </ul>
         <div id="shortcuts">
           <button id="cart" onClick={GoToOrders}>
-          <img src={redCart} alt="Carrinho" />  
+            {(orders?.length||0)>=1 &&
+          <span id='notify'>{orders?.length||0}</span>
+}<img src={redCart} alt="Carrinho" />  
           </button>
           
           <button id="login-btn" onClick = {GoToLogin} >Entrar</button>

@@ -47,11 +47,13 @@ const exit =()=>{
     <div>
       <div className='overlay' style={{display:color} } onClick={exit} ></div>
       <div >
-      <Header />
+      <Header orders={orders}/>
         <div className="container">
-          
-           <OrderCard>  </OrderCard>
-           <OrderCard/>
+            <OrderCard></OrderCard>
+            <div className='total'>
+              <h2>TOTAL DO PEDIDO:</h2>
+              <h2 className='totalPrice'>R$ 00,00</h2>
+            </div>
           <div className="actions">
             <button
               onClick={() => handleButton()}

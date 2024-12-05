@@ -2,14 +2,9 @@
 .container {
     display: flex;
     gap: 25px;
-    justify-content: center;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #ffe6e6;
-    padding-top: 60px;
-
+    padding-top: 10%;
+    
 }
 
 .card {
@@ -23,6 +18,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     width:40%;
     padding: 2%;
+    transform: translate(12%);
     padding-bottom: 4%;
     padding-top: 2%;
 }

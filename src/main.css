@@ -9,6 +9,7 @@
 body{
     background-color:#FFF3F3 ;
     overflow-x: hidden;
+    height: auto;
 }
 section{
     padding: 48px 8%;
