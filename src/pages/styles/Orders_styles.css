@@ -159,7 +159,7 @@
     }
     .thankYou{
         z-index: 4;
-        position: absolute;
+        position: fixed;
         top: 26%;
         right: 50%;
         transform: translate(50%);

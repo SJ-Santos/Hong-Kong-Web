@@ -13,7 +13,7 @@ function Header({ orders }) {
   const GoToLogin = () => {
     navigate('/LoginRegister');
   };
-
+  //Alterar para fazer a verificação se o usuario está dentro ou não
   const userIn = false;
   
   const GoToOrders = () => {

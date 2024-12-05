@@ -5,7 +5,7 @@ import "./styles/LoginRegister_styles.css";
 import HONG from "./assets/icons/HONG.svg";
 import KONG from "./assets/icons/KONG.svg";
 import yakisoba from "./assets/icons/yakisoba_animation.svg"
-import { useNavigate ,useLocation} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 

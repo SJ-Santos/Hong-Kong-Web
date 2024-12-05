@@ -16,7 +16,9 @@ const Orders = () => {
   const { orders } = location.state || {};
   console.log(orders)
   const goToLogin = () => navigate('/LoginRegister');
-  const userIn = false;
+  //Serve para dizer se o usuario está dentro ou não
+  const userIn = false; //Precisa que tenha interação com o banco de dados 
+
   const [showText, setShowText] = useState(false);
   const [showEnd, setShowEnd] = useState(false);
   const [color, setColor] = useState('none');
