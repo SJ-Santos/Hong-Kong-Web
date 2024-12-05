@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import superCorrect from'./assets/icons/superCorrect.svg'
 import './styles/Orders_styles.css';
 import './components/components-styles/Header_styles.css';
@@ -13,6 +13,9 @@ import './styles/Orders_styles.css'
 
 const Orders = () => {
   const navigate = useNavigate(); 
+  const location = useLocation();
+  const { orders } = location.state || {};
+  console.log(orders)
   const goToLogin = () => navigate('/LoginRegister');
   const userIn = false;
   const [showText, setShowText] = useState(false);
@@ -46,8 +49,9 @@ const exit =()=>{
       <div >
       <Header />
         <div className="container">
-        
+          
            <OrderCard>  </OrderCard>
+           <OrderCard/>
           <div className="actions">
             <button
               onClick={() => handleButton()}

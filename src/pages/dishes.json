@@ -1,0 +1,47 @@
+[
+  { "id" :"1",
+    "image": "YaksobaFundo",
+    "name": "Yakisoba tradicional",
+    "cost": "R$00,00"
+  },
+  { "id":"2",
+    "image": "carne",
+    "name": "Carne acebolada e risoto",
+    "cost": "R$00,00"
+  },
+  { "id":"3",
+    "image": "aparmegiana",
+    "name": "Frango à parmegiana",
+    "cost": "R$00,00"
+  },
+  { "id":"4",
+    "image": "frango",
+    "name": "Frango empanado com fritas",
+    "cost": "R$00,00"
+  },
+  {"id":"5",
+    "image": "yakFritas",
+    "name": "Yakisoba com fritas",
+    "cost": "R$00,00"
+  },
+  { "id":"6",
+    "image": "bifum",
+    "name": "Bifum",
+    "cost": "R$00,00"
+  },
+  { "id":"7",
+    "image": "camarao",
+    "name": "Camarões ao molho de tomate",
+    "cost": "R$00,00"
+  },
+  { "id":"8",
+    "image": "xadrez",
+    "name": "Frango xadrez",
+    "cost": "R$00,00"
+  },
+  { "id":"9",
+    "image": "empanado",
+    "name": "Frango empanado",
+    "cost": "R$00,00"
+  }
+]

@@ -5,13 +5,13 @@ import Hong from '../assets/icons/HONG.svg'
 import { useNavigate } from 'react-router-dom';
 import Kong from '../assets/icons/KONG.svg'
 import redCart from '../assets/icons/red cart.svg'
-function Header() {
+function Header({orders}) {
 
   const navigate = useNavigate();
   const GoToLogin = () =>{
     navigate('/LoginRegister');
   };
-  const GoToOrders = () =>{navigate('/Orders');};
+  const GoToOrders = () =>{navigate('/Orders',{state:{orders}});};
   const GoToHome = () =>{navigate('/Home');};
   return (
     <header>

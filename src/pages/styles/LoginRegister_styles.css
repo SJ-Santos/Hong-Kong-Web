@@ -150,6 +150,7 @@ flex-direction: row;
     font-weight: 400;
     font-size: 15px;
     opacity: 0.5;
+    
 }
 .container-registro label, .container-email-senha label{
     color: rgba(90, 90, 90,0.8);
@@ -212,7 +213,8 @@ flex-direction: row;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap:100px;
+    flex-wrap: nowrap;
+    gap:80px;
     margin-top: 10px;
 
 }
@@ -222,15 +224,14 @@ flex-direction: row;
     margin-left: 5px;
 }
 .lembrar input{
-    position: absolute;
     left: 40px;
+    align-items: center;
     bottom: 258px;
 }
 
 #button-entrar{
     background-image: linear-gradient(#C12F28,#E16868 );
-    position: flex;
-    width: 400px;
+    width: 97%;
     height: 53.37px;
     top: 605px;
     left: 865px;
@@ -238,6 +239,7 @@ flex-direction: row;
     border: none;
     border-radius: 20px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 
@@ -245,7 +247,7 @@ flex-direction: row;
     display: inline-block;
     padding: 10px 20px;
     font-size: 20px;
-    width: 400px;
+    width: 97%;
     height: 53.37px;
     top: 605px;
     left: 865px;
@@ -258,12 +260,10 @@ flex-direction: row;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
-#registerToggle:checked ~ .container-login {
-   display: none;
-}
+
 #esqueceu{
-    color: #464040;
-    font-size: 14px;
+    color: #5A5A5A;
+    font-size: 15px;
     font-weight: Medium;
 }
 
@@ -271,21 +271,23 @@ flex-direction: row;
     text-decoration:underline;
 }
 #lembrar-senha{
-    color: #464040;
-    font-size: 13px;
-    font-weight: Medium;
+    color: #5A5A5A;
+    font-size: 15px;
+    font-weight: 500;
 }
 .imagem-div {
   position: absolute;
   z-index: 3;
-  top: 50%; /* Centraliza verticalmente */
-  right: 80%; /* Compensa o deslocamento */
-  transition: transform 0.8s ease-in-out, left 0.8s ease-in-out;
+  
+transform-origin: 120%;
+  transition: transform 0.8s ease-in-out, left   0.8s ease-in-out;
+  transform-origin: 50%;
   
 }
 
 .imagem-esquerda {
   left: 5%; /* Posição quando a tela de login está visível */
+ 
 }
 
 .imagem-direita {
@@ -293,10 +295,12 @@ flex-direction: row;
 }
 
 .imagem {
-  width: 1000px; /* Ajuste o tamanho da imagem */
-  height: 1200px;
+  width: 400%; /* Ajuste o tamanho da imagem */
+  height: auto;
   position: relative;
-  left: -150px;
+  left: -250px;
+  top: -30px;
+
   
 }
 
@@ -324,7 +328,7 @@ flex-direction: row;
     padding: 0 10px;      /* Espaçamento entre a linha e o texto */
     font-weight: bold;    /* Deixa o texto em negrito */
     color: #c12f28;           /* Cor do texto */
-    background-color: #ffffff; /* Fundo branco para esconder a linha no meio */
+    background-color:none; /* Fundo branco para esconder a linha no meio */
     font-size: 15px;
 }
 

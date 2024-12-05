@@ -38,11 +38,10 @@ const LoginRegister = () => {
 
 
       {/* Conteúdo principal */}
-      {showRegister ? (
-        <RegisterForm setShowRegister={setShowRegister} />
-      ) : (
+        <RegisterForm  setShowRegister={setShowRegister} />
+      
         <LoginForm setShowRegister={setShowRegister} />
-      )}
+      
       </div>
     </div>
   );
@@ -50,8 +49,8 @@ const LoginRegister = () => {
 
 // Componente de formulário de registro
 const RegisterForm = ({ setShowRegister }) => (
-  <div className="container-registro">
-    <h2 className="registre-se">Registre-se</h2>
+  <div className="container-registro" >
+    <h2  className="registre-se">Registre-se</h2>
     <div className="registro">
       <div className="nome-sobrenome">
         <div className="nome">
