@@ -9,31 +9,29 @@ import user from '../assets/icons/red user.svg';
 
 function Header({ orders }) {
   const navigate = useNavigate();
-  
+  const userIn = localStorage.getItem('token') ? true : false;
+
   const GoToLogin = () => {
     navigate('/LoginRegister');
   };
-  //Alterar para fazer a verificação se o usuario está dentro ou não
-  const userIn = false;
-  
+
   const GoToOrders = () => {
     navigate('/Orders', { state: { orders } });
   };
 
   const GoToHome = () => {
-    navigate('/');
+    navigate('/Home');
   };
 
   const [quant, setQuant] = useState(0);
 
   useEffect(() => {
-    // Calcular o total de quantidades quando 'orders' mudar
     const totalQuantity = orders?.reduce((accmulator, order) => {
       return accmulator + (order.quantity || 0);
     }, 0);
-    
+
     setQuant(totalQuantity);
-  }, [orders]); // Recalcular sempre que 'orders' mudar
+  }, [orders]);
 
   return (
     <header>
@@ -55,16 +53,10 @@ function Header({ orders }) {
         </ul>
         <div id="shortcuts">
           <button id="cart" onClick={GoToOrders}>
-            
-            {
-            (orders?.length || 0) >= 1 && (
-              <span id="notify">{quant}</span>
-            )}
+            {orders?.length >= 1 && <span id="notify">{quant}</span>}
             <img src={redCart} alt="Carrinho" />
           </button>
-          {!userIn && (
-            <button id="login-btn" onClick={GoToLogin}>Entrar</button>
-          )}
+          {!userIn && <button id="login-btn" onClick={GoToLogin}>Entrar</button>}
           {userIn && (
             <button id="user">
               <img src={user} alt="Usuario" />

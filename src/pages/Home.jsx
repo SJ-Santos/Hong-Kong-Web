@@ -1,34 +1,31 @@
-import React, { useState } from 'react'; // Adicionando useState
+import React, { useState } from 'react'; 
 import Header from './components/Header';
 import DishCard from './components/DishCard';
 import Sobrenos from './components/AboutUs';
 import { useNavigate } from 'react-router-dom';
 import dishes from './dishes.json'
-import './styles/Home_styles.css';// Importe o CSS que você usava
-//*****************importar as imagens*********************** refazer todos os imports qnd colocar as imagens
-import Yaksoba from './assets/imgs/plate_img/Yaksoba.png'
+import './styles/Home_styles.css';
+import Yaksoba from './assets/imgs/plate_img/Yaksoba.png';
+
 function Home() {
+  const [orders, setOrders] = useState([]);
 
-
-  const [orders, setOrders] = useState([]); // Agora o useState está sendo importado corretamente
-
-  // Função para adicionar um prato ao pedido
-  const onAddToOrder = (name, cost,id, size, path,quantity) => {
+  const onAddToOrder = (name, cost, id, size, path, quantity) => {
     const nameExists = orders.some((order) => order.name === name);
-    console.log(nameExists)
     if (!nameExists) {
-      setOrders([...orders, {name,cost,id,size,path,quantity}]); // Adiciona o novo item apenas se o nome não existir
+      setOrders([...orders, { name, cost, id, size, path, quantity }]);
     } else {
-      orders.map((order)=>{
-        order.name === name? {...order, quantity: order.quantity++}:order;
-      })
+      setOrders(orders.map((order) => 
+        order.name === name 
+          ? { ...order, quantity: order.quantity + 1 }
+          : order
+      ));
     }
-    console.log(orders);
   };
 
   return (
     <div>
-      <Header  orders={orders} />
+      <Header orders={orders} />
       <main id="content">
         <section id="home">
           <div id="cta">
@@ -54,12 +51,12 @@ function Home() {
           <div id="dishes">
             {dishes.map((dish) => (
               <DishCard
-                key={dish.id} // Adicionando a chave para cada item no mapa
+                key={dish.id}
                 name={dish.name}
                 cost={dish.cost}
                 id={dish.id}
-                path={dish.path} // Passando a imagem como prop
-                quantity = {dish.quantity}
+                path={dish.path}
+                quantity={dish.quantity}
                 onAddToOrder={onAddToOrder}
               />
             ))}
