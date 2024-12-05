@@ -13,10 +13,18 @@ function Home() {
   const [orders, setOrders] = useState([]); // Agora o useState está sendo importado corretamente
 
   // Função para adicionar um prato ao pedido
-  const onAddToOrder = (name, cost,id, size, path) => {
-    setOrders([...orders, { name,  cost,id, size , path}]); // Adiciona o pedido ao array
+  const onAddToOrder = (name, cost,id, size, path,quantity) => {
+    const nameExists = orders.some((order) => order.name === name);
+    console.log(nameExists)
+    if (!nameExists) {
+      setOrders([...orders, {name,cost,id,size,path,quantity}]); // Adiciona o novo item apenas se o nome não existir
+    } else {
+      orders.map((order)=>{
+        order.name === name? {...order, quantity: order.quantity++}:order;
+      })
+    }
+    console.log(orders);
   };
-  console.log(orders);
 
   return (
     <div>
@@ -51,6 +59,7 @@ function Home() {
                 cost={dish.cost}
                 id={dish.id}
                 path={dish.path} // Passando a imagem como prop
+                quantity = {dish.quantity}
                 onAddToOrder={onAddToOrder}
               />
             ))}

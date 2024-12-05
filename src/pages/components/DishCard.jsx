@@ -5,7 +5,7 @@ import './components-styles/DishCard_styles.css';
 import carrinho from '../assets/icons/whiteCart.svg';
 
 
-function DishCard({ name, cost, id, path, onAddToOrder,}) {
+function DishCard({ name, cost, id, path,quantity, onAddToOrder,}) {
   const [size, setSize] = useState(''); // Estado para armazenar o tamanho selecionado
 
   // Função para alterar o tamanho selecionado
@@ -40,7 +40,7 @@ function DishCard({ name, cost, id, path, onAddToOrder,}) {
         <p>Junior</p>
       </div>
 
-      <button onClick={() => onAddToOrder(name, cost, id, size, path)}>
+      <button onClick={() => onAddToOrder(name, cost, id, size, path,quantity= 1)}>
         <img src={carrinho} alt="Adicionar ao carrinho" />
         ADICIONAR
       </button>

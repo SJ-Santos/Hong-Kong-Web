@@ -1,19 +1,40 @@
-import React from 'react';
-import './components-styles/Header_styles.css'
-import './components-styles/btn.css'
-import Hong from '../assets/icons/HONG.svg'
+import React, { useState, useEffect } from 'react';
+import './components-styles/Header_styles.css';
+import './components-styles/btn.css';
+import Hong from '../assets/icons/HONG.svg';
 import { useNavigate } from 'react-router-dom';
-import Kong from '../assets/icons/KONG.svg'
-import redCart from '../assets/icons/red cart.svg'
-import user from '../assets/icons/red user.svg'
-function Header({orders}) {
+import Kong from '../assets/icons/KONG.svg';
+import redCart from '../assets/icons/red cart.svg';
+import user from '../assets/icons/red user.svg';
+
+function Header({ orders }) {
   const navigate = useNavigate();
-  const GoToLogin = () =>{
+  
+  const GoToLogin = () => {
     navigate('/LoginRegister');
   };
-  const userIn = false ;
-  const GoToOrders = () =>{navigate('/Orders',{state:{orders}});};
-  const GoToHome = () =>{navigate('/Home');};
+
+  const userIn = false;
+  
+  const GoToOrders = () => {
+    navigate('/Orders', { state: { orders } });
+  };
+
+  const GoToHome = () => {
+    navigate('/Home');
+  };
+
+  const [quant, setQuant] = useState(0);
+
+  useEffect(() => {
+    // Calcular o total de quantidades quando 'orders' mudar
+    const totalQuantity = orders?.reduce((accmulator, order) => {
+      return accmulator + (order.quantity || 0);
+    }, 0);
+    
+    setQuant(totalQuantity);
+  }, [orders]); // Recalcular sempre que 'orders' mudar
+
   return (
     <header>
       <nav id="nav_bar">
@@ -34,18 +55,21 @@ function Header({orders}) {
         </ul>
         <div id="shortcuts">
           <button id="cart" onClick={GoToOrders}>
-            {(orders?.length||0)>=1 &&
-          <span id='notify'>{orders?.length||0}</span>
-}<img src={redCart} alt="Carrinho" />  
+            
+            {
+            (orders?.length || 0) >= 1 && (
+              <span id="notify">{quant}</span>
+            )}
+            <img src={redCart} alt="Carrinho" />
           </button>
-          { !userIn &&
-          <button id="login-btn" onClick = {GoToLogin} >Entrar</button>
-}           {
-            userIn &&
-            <button id='user'>
+          {!userIn && (
+            <button id="login-btn" onClick={GoToLogin}>Entrar</button>
+          )}
+          {userIn && (
+            <button id="user">
               <img src={user} alt="Usuario" />
             </button>
-}
+          )}
         </div>
       </nav>
     </header>
