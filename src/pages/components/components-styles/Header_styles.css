@@ -57,8 +57,9 @@ margin-right: 60px;
 #shortcuts{
     margin-left: 0px;
     display: flex;
-    gap: 40px;
+    gap: 45px;
     position: relative;
+    transform: translate(2%);
 }
 
 #notify{

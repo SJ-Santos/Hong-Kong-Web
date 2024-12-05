@@ -5,12 +5,13 @@ import Hong from '../assets/icons/HONG.svg'
 import { useNavigate } from 'react-router-dom';
 import Kong from '../assets/icons/KONG.svg'
 import redCart from '../assets/icons/red cart.svg'
+import user from '../assets/icons/red user.svg'
 function Header({orders}) {
-  console.log(orders)
   const navigate = useNavigate();
   const GoToLogin = () =>{
     navigate('/LoginRegister');
   };
+  const userIn = false ;
   const GoToOrders = () =>{navigate('/Orders',{state:{orders}});};
   const GoToHome = () =>{navigate('/Home');};
   return (
@@ -37,9 +38,14 @@ function Header({orders}) {
           <span id='notify'>{orders?.length||0}</span>
 }<img src={redCart} alt="Carrinho" />  
           </button>
-          
+          { !userIn &&
           <button id="login-btn" onClick = {GoToLogin} >Entrar</button>
-          
+}           {
+            userIn &&
+            <button id='user'>
+              <img src={user} alt="Usuario" />
+            </button>
+}
         </div>
       </nav>
     </header>

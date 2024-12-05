@@ -16,7 +16,7 @@
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    width:40%;
+    width:45%;
     padding: 2%;
     transform: translate(12%);
     padding-bottom: 4%;
@@ -48,13 +48,18 @@
     font-weight: bold;
     border-radius: 100%;
   }
-  
+  .image{
+    width: 200%; /* Ajusta a largura com base no container */
+    max-width: 300px; /* Tamanho máximo das imagens */
+    aspect-ratio: 16 / 9; /* Define a proporção (ex: 16:9) */
+    overflow: hidden;
+    border-radius: 10px; /* Garante que o conteúdo extra não seja exibido */
+  }
 
 .image img {
-    margin-top: 5%;
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+  height: 100%;
+  object-fit: cover; 
     
 }
 

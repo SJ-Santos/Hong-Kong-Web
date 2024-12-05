@@ -49,3 +49,18 @@
     background-color: #8a221c;
     cursor: pointer;
 }
+#user{ width: 50px;
+    height: 47px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color:#FFFFFF ;
+    
+}
+#user img{
+    width: 25px;
+}

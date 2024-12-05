@@ -4,22 +4,23 @@ import './components-styles/DishCard_styles.css';
 //*********image************** */
 import carrinho from '../assets/icons/whiteCart.svg';
 
-function DishCard({ name, cost, id, onAddToOrder, image }) {
+
+function DishCard({ name, cost, id, path, onAddToOrder,}) {
   const [size, setSize] = useState(''); // Estado para armazenar o tamanho selecionado
 
   // Função para alterar o tamanho selecionado
   const handleSizeChange = (event) => {
     setSize(event.target.value); // Atualiza o estado do tamanho
   };
-
   return (
     <div className="dishes-all">
-      <img id="dish_photo" src={image} alt={name} /> {/* A imagem vem via prop */}
+      <img id="dish_photo" src={path} alt={name} /> {/* A imagem vem via prop */}
       <h3 className="dish_name">{name}</h3>
       <p className="cost">{cost}</p>
 
       <div id="choice_size">
         <input
+          required
           type="radio"
           name="size"
           value="Grande"
@@ -29,6 +30,7 @@ function DishCard({ name, cost, id, onAddToOrder, image }) {
         <p>Grande</p>
 
         <input
+          required
           type="radio"
           name="size"
           value="Junior"
@@ -38,7 +40,7 @@ function DishCard({ name, cost, id, onAddToOrder, image }) {
         <p>Junior</p>
       </div>
 
-      <button onClick={() => onAddToOrder(name, cost, id, size)}>
+      <button onClick={() => onAddToOrder(name, cost, id, size, path)}>
         <img src={carrinho} alt="Adicionar ao carrinho" />
         ADICIONAR
       </button>

@@ -1,46 +1,48 @@
 [
   { "id" :"1",
-    "image": "YaksobaFundo",
+    "path": "./imgs/Yakisoba.jpeg",
     "name": "Yakisoba tradicional",
     "cost": "R$00,00"
-  },
+  
+  }
+  ,
   { "id":"2",
-    "image": "carne",
+    "path": "./imgs/Carne.jpeg",
     "name": "Carne acebolada e risoto",
     "cost": "R$00,00"
   },
   { "id":"3",
-    "image": "aparmegiana",
+    "path": "./imgs/Parmegiana.jpeg",
     "name": "Frango à parmegiana",
     "cost": "R$00,00"
   },
   { "id":"4",
-    "image": "frango",
+    "path": "./imgs/Frango.jpeg",
     "name": "Frango empanado com fritas",
     "cost": "R$00,00"
   },
   {"id":"5",
-    "image": "yakFritas",
+    "path": "./imgs/YakisobaFritas.jpeg",
     "name": "Yakisoba com fritas",
     "cost": "R$00,00"
   },
   { "id":"6",
-    "image": "bifum",
+    "path": "./imgs/Bifum.jpeg",
     "name": "Bifum",
     "cost": "R$00,00"
   },
   { "id":"7",
-    "image": "camarao",
+    "path": "./imgs/Camarões.jpeg",
     "name": "Camarões ao molho de tomate",
     "cost": "R$00,00"
   },
   { "id":"8",
-    "image": "xadrez",
+    "path": "./imgs/Xadrez.jpeg",
     "name": "Frango xadrez",
     "cost": "R$00,00"
   },
   { "id":"9",
-    "image": "empanado",
+    "path": "./imgs/Empanado.jpeg",
     "name": "Frango empanado",
     "cost": "R$00,00"
   }

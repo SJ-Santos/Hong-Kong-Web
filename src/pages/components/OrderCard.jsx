@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './components-styles/OrderCard_styles.css'
-import CamaraoComArroz from '../assets/imgs/plate_img/Camarao_com_arroz.jpeg';
 
-const OrderCard =() =>{
+const OrderCard =({name, path}) =>{
     const [quantity, setQuantity] = useState(1);
     const increaseQuantity = () => setQuantity(quantity + 1);
     const decreaseQuantity = () => setQuantity(quantity > 1 ? quantity - 1 : 1); // Evita valores negativos
@@ -15,11 +14,11 @@ const OrderCard =() =>{
             </button>
 
             <div className="image">
-              <img src={CamaraoComArroz} alt="Camarões ao molho de tomate" />
+              <img src={path} alt={name} />
             </div>
 
             <div className="info">
-              <h2>Camarões ao molho de tomate</h2>
+              <h2>{name}</h2>
               <p id='portion'>Porção individual</p>
               <div className="quantity-price">
                 <div className="quantity">

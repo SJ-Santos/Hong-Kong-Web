@@ -4,7 +4,6 @@ import superCorrect from'./assets/icons/superCorrect.svg'
 import './styles/Orders_styles.css';
 import './components/components-styles/Header_styles.css';
 import './components/components-styles/btn.css';
-import CamaraoComArroz from './assets/imgs/plate_img/Camarao_com_arroz.jpeg';
 import Header from './components/Header';
 import OrderCard from './components/OrderCard';
 import Correct from './assets/icons/correct.svg';
@@ -49,14 +48,19 @@ const exit =()=>{
       <div >
       <Header orders={orders}/>
         <div className="container">
-            <OrderCard></OrderCard>
-            <div className='total'>
+         { orders.map((order)=>
+         
+         <OrderCard 
+          key={order.id}
+          name={order.name}
+          path={order.path} />)
+           }  <div className='total'>
               <h2>TOTAL DO PEDIDO:</h2>
               <h2 className='totalPrice'>R$ 00,00</h2>
             </div>
           <div className="actions">
             <button
-              onClick={() => handleButton()}
+              onClick={handleButton}
               className='finishOrder'
             >
               <img src={Correct} alt="Simbolo de correto" />
@@ -79,7 +83,7 @@ const exit =()=>{
           
         >
           <p className='ops'>Ops! Para finalizar o seu pedido, você deve entrar na sua conta!</p>
-          <div className='login'>
+          <div className='login' onClick={goToLogin}>
             Entre na sua conta
           </div>
           <div className='OneOrOther'>
@@ -87,7 +91,7 @@ const exit =()=>{
             <p>ou</p>
             <span className='line2'></span>
           </div>
-          <button className='signIn'>
+          <button className='signIn' onClick={goToLogin}>
             Registre-se agora mesmo
           </button>
         </div>
