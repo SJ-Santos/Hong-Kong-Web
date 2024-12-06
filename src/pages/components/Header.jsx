@@ -20,7 +20,7 @@ function Header({ orders }) {
   };
 
   const GoToHome = () => {
-    navigate('/Home');
+    navigate('/');
   };
 
   const [quant, setQuant] = useState(0);
