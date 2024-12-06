@@ -10,11 +10,13 @@ import Correct from './assets/icons/correct.svg';
 import whiteCart from './assets/icons/whiteCart.svg';
 import './styles/Orders_styles.css'
 
+
+
 const Orders = () => {
   const navigate = useNavigate(); 
   const location = useLocation();
-  const { orders } = location.state || {};
-  console.log(orders)
+  const { orders = [], setOrders = () => {} } = location.state || {};
+  
   const goToLogin = () => navigate('/LoginRegister');
   //Serve para dizer se o usuario está dentro ou não
   const userIn = false; //Precisa que tenha interação com o banco de dados 
@@ -48,14 +50,18 @@ const exit =()=>{
     <div>
       <div className='overlay' style={{display:color} } onClick={exit} ></div>
       <div >
-      <Header orders={orders}/>
+      <Header orders={orders} setOrders={setOrders}/>
         <div className="container">
          { orders.map((order)=>
          
          <OrderCard 
+          orders={orders}
           key={order.id}
           name={order.name}
-          path={order.path} />)
+          path={order.path} 
+          quantity={order.quantity}
+          setOrders={setOrders}
+          />)
            }  <div className='total'>
               <h2>TOTAL DO PEDIDO:</h2>
               <h2 className='totalPrice'>R$ 00,00</h2>

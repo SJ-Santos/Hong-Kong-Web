@@ -13,7 +13,6 @@ const LoginRegister = () => {
   
   const navigate = useNavigate();
   const [showRegister, setShowRegister] = useState(false);
-  const GoToOrders = () =>{navigate('/Orders');};
   const GoToHome = () =>{navigate('/');};
   return (
     <div className="container-tela">

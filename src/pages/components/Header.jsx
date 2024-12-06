@@ -7,20 +7,20 @@ import Kong from '../assets/icons/KONG.svg';
 import redCart from '../assets/icons/red cart.svg';
 import user from '../assets/icons/red user.svg';
 
-function Header({ orders }) {
+function Header({ orders ,setOrders}) {
   const navigate = useNavigate();
-  const userIn = localStorage.getItem('token') ? true : false;
+  const userIn = false;
 
   const GoToLogin = () => {
     navigate('/LoginRegister');
   };
+const GoToOrders = () => {
+  navigate('/orders', { state: { orders, setOrders } });
+};
 
-  const GoToOrders = () => {
-    navigate('/Orders', { state: { orders } });
-  };
 
   const GoToHome = () => {
-    navigate('/Home');
+    navigate('/');
   };
 
   const [quant, setQuant] = useState(0);
