@@ -54,7 +54,8 @@ const exit =()=>{
           key={order.id}
           name={order.name}
           path={order.path}
-          quantity={order.quantity} />)
+          quantity={order.quantity} 
+          size = {order.size}/>)
            }  <div className='total'>
               <h2>TOTAL DO PEDIDO:</h2>
               <h2 className='totalPrice'>R$ 00,00</h2>

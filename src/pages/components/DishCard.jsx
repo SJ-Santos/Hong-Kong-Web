@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import './components-styles/DishCard_styles.css';
-
+import { AppContext } from '../../App';
 //*********image************** */
 import carrinho from '../assets/icons/whiteCart.svg';
 
 
-function DishCard({ name, cost, id, path,quantity, onAddToOrder,}) {
-  const [size, setSize] = useState(''); // Estado para armazenar o tamanho selecionado
-
+function DishCard({ name, cost, id, path,quantity}) {
+  const [size, setSize] = useState("Grande"); // Estado para armazenar o tamanho selecionado
+  const {onAddToOrder} = useContext(AppContext)
   // Função para alterar o tamanho selecionado
   const handleSizeChange = (event) => {
     setSize(event.target.value); // Atualiza o estado do tamanho

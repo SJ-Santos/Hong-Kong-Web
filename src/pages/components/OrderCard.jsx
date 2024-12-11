@@ -1,7 +1,7 @@
 import React, { useState,useContext } from 'react';
 import './components-styles/OrderCard_styles.css'
 import { AppContext } from '../../App';
-const OrderCard =({name, path,quantity}) =>{
+const OrderCard =({name, path,quantity,size}) =>{
     const [quant, setQuantity] = useState(quantity);
     const increaseQuantity = () =>{ setQuantity(quant + 1)
       setOrders(orders.map((order) => 
@@ -26,7 +26,7 @@ const OrderCard =({name, path,quantity}) =>{
 
             <div className="info">
               <h2>{name}</h2>
-              <p id='portion'>Porção individual</p>
+              <p id='portion'>Porção {size} </p>
               <div className="quantity-price">
                 <div className="quantity">
                   <button onClick={decreaseQuantity}>-</button>

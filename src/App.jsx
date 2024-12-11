@@ -12,7 +12,9 @@ function App(){
     
   const onAddToOrder = (name, cost, id, size, path, quantity) => {
     const nameExists = orders.some((order) => order.name === name);
+    
     if (!nameExists) {
+        
       setOrders([...orders, { name, cost, id, size, path, quantity }]);
     } else {
       setOrders(orders.map((order) => 
@@ -21,6 +23,7 @@ function App(){
           : order
       ));
     }
+    console.log(orders)
   };
 return(
     <div>

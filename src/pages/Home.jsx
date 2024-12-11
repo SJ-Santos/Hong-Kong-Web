@@ -44,7 +44,6 @@ function Home() {
                 id={dish.id}
                 path={dish.path}
                 quantity={dish.quantity}
-                onAddToOrder={onAddToOrder}
               />
             ))}
           </div>
