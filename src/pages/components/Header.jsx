@@ -1,12 +1,18 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { AppContext } from '../../App';
+import { useNavigate } from 'react-router-dom';
 import './components-styles/Header_styles.css';
 import './components-styles/btn.css';
+
+//IMAGES
 import Hong from '../assets/icons/HONG.svg';
-import { useNavigate } from 'react-router-dom';
 import Kong from '../assets/icons/KONG.svg';
 import redCart from '../assets/icons/red cart.svg';
 import user from '../assets/icons/red user.svg';
-import { AppContext } from '../../App';
+import menu from '../assets/icons/menu.svg'
+import inicio from '../assets/icons/Inicio.svg'
+import whiteCart from '../assets/icons/whiteCart.svg'
+import userWhite from '../assets/icons/userWhite.svg'
 function Header() {
   const {orders} = useContext(AppContext)
   const navigate = useNavigate();
@@ -65,6 +71,27 @@ function Header() {
           )}
         </div>
       </nav>
+          
+      <div id='nav_list-mobile'>
+            <ul>
+              <div className='imgs' >
+               <img src={menu} alt="Icone de menu" />
+              <li className="nav_items-mobile">Cardápio</li>
+              </div>
+              <div className='imgs'>
+               <img src={inicio} alt="Icone de Inicio" />
+              <li className="nav_items-mobile">Início</li>
+              </div>
+              <div className='imgs'>
+               <img src={whiteCart} alt="Icone de Carrinhos" />
+              <li className="nav_items-mobile">Carrinho</li>
+              </div>
+              <div className='imgs'>
+               <img src={userWhite} alt="Icone de menu" />
+              <li className="nav_items-mobile">User</li>
+              </div>
+            </ul>
+          </div>
     </header>
   );
 }

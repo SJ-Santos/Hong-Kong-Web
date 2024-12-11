@@ -1,4 +1,4 @@
-import React, { useState,useContext} from 'react'; 
+import React, { useState, useContext } from 'react';
 import Header from './components/Header';
 import DishCard from './components/DishCard';
 import Sobrenos from './components/AboutUs';
@@ -8,8 +8,8 @@ import './styles/Home_styles.css';
 import Yaksoba from './assets/imgs/plate_img/Yaksoba.png';
 import { AppContext } from '../App';
 function Home() {
-  const {orders,setOrders,onAddToOrder} = useContext(AppContext)
- 
+  const { orders, setOrders, onAddToOrder } = useContext(AppContext)
+
   return (
     <div>
       <Header />
@@ -27,6 +27,7 @@ function Home() {
             <div className="shape" id="rect3"></div>
             <img src={Yaksoba} alt="yaksoba" />
           </div>
+          <button id='order-mobile'>Peça agora</button>
         </section>
 
         <section id="menu">
