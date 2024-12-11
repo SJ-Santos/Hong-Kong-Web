@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useState,useContext } from 'react';
+import { useNavigate} from 'react-router-dom';
 import superCorrect from'./assets/icons/superCorrect.svg'
 import './styles/Orders_styles.css';
 import './components/components-styles/Header_styles.css';
@@ -9,13 +9,11 @@ import OrderCard from './components/OrderCard';
 import Correct from './assets/icons/correct.svg';
 import whiteCart from './assets/icons/whiteCart.svg';
 import './styles/Orders_styles.css'
-
+import { AppContext } from '../App';
 const Orders = () => {
   const navigate = useNavigate(); 
-  const location = useLocation();
-  const { orders } = location.state || {};
-  console.log(orders)
   const goToLogin = () => navigate('/LoginRegister');
+  const {orders} = useContext(AppContext);
   //Serve para dizer se o usuario está dentro ou não
   const userIn = false; //Precisa que tenha interação com o banco de dados 
 
@@ -48,14 +46,15 @@ const exit =()=>{
     <div>
       <div className='overlay' style={{display:color} } onClick={exit} ></div>
       <div >
-      <Header orders={orders}/>
+      <Header/>
         <div className="container">
          { orders.map((order)=>
          
          <OrderCard 
           key={order.id}
           name={order.name}
-          path={order.path} />)
+          path={order.path}
+          quantity={order.quantity} />)
            }  <div className='total'>
               <h2>TOTAL DO PEDIDO:</h2>
               <h2 className='totalPrice'>R$ 00,00</h2>

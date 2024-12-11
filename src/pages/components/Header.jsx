@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './components-styles/Header_styles.css';
 import './components-styles/btn.css';
 import Hong from '../assets/icons/HONG.svg';
@@ -6,8 +6,9 @@ import { useNavigate } from 'react-router-dom';
 import Kong from '../assets/icons/KONG.svg';
 import redCart from '../assets/icons/red cart.svg';
 import user from '../assets/icons/red user.svg';
-
-function Header({ orders }) {
+import { AppContext } from '../../App';
+function Header() {
+  const {orders} = useContext(AppContext)
   const navigate = useNavigate();
   const userIn = localStorage.getItem('token') ? true : false;
 

@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import './components-styles/OrderCard_styles.css'
+import { AppContext } from '../../App';
+const OrderCard =({name, path,quantity}) =>{
+    const [quant, setQuantity] = useState(quantity);
+    const increaseQuantity = () =>{ setQuantity(quant + 1)
+      setOrders(orders.map((order) => 
+        order.name === name 
+          ? { ...order, quantity: order.quantity + 1 }
+          : order
+      ));};
+    const decreaseQuantity = () => setQuantity(quant > 1 ? quant - 1 : 1); // Evita valores negativos
+    const {orders,setOrders} = useContext(AppContext);
 
-const OrderCard =({name, path}) =>{
-    const [quantity, setQuantity] = useState(1);
-    const increaseQuantity = () => setQuantity(quantity + 1);
-    const decreaseQuantity = () => setQuantity(quantity > 1 ? quantity - 1 : 1); // Evita valores negativos
-   
+
     return(
         <>
             <div className="card">
@@ -23,7 +30,7 @@ const OrderCard =({name, path}) =>{
               <div className="quantity-price">
                 <div className="quantity">
                   <button onClick={decreaseQuantity}>-</button>
-                  <span>{quantity}</span>
+                  <span>{quant}</span>
                   <button onClick={increaseQuantity}>+</button>
                 </div>
                 <div className="price">R$ 00,00</div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState,useContext} from 'react'; 
 import Header from './components/Header';
 import DishCard from './components/DishCard';
 import Sobrenos from './components/AboutUs';
@@ -6,26 +6,13 @@ import { useNavigate } from 'react-router-dom';
 import dishes from './dishes.json'
 import './styles/Home_styles.css';
 import Yaksoba from './assets/imgs/plate_img/Yaksoba.png';
-
+import { AppContext } from '../App';
 function Home() {
-  const [orders, setOrders] = useState([]);
-
-  const onAddToOrder = (name, cost, id, size, path, quantity) => {
-    const nameExists = orders.some((order) => order.name === name);
-    if (!nameExists) {
-      setOrders([...orders, { name, cost, id, size, path, quantity }]);
-    } else {
-      setOrders(orders.map((order) => 
-        order.name === name 
-          ? { ...order, quantity: order.quantity + 1 }
-          : order
-      ));
-    }
-  };
-
+  const {orders,setOrders,onAddToOrder} = useContext(AppContext)
+ 
   return (
     <div>
-      <Header orders={orders} />
+      <Header />
       <main id="content">
         <section id="home">
           <div id="cta">
