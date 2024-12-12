@@ -42,6 +42,7 @@ const exit =()=>{
          
          <OrderCard 
           key={i}
+          id={i}
           name={order.name}
           path={order.path}
           quantity={order.quantity} 

@@ -11,20 +11,19 @@ function App(){
     const [orders, setOrders] = useState([]);
     
   const onAddToOrder = (name, cost, id, size, path, quantity) => {
-    const nameExists = orders.some((order) => order.name === name);
+    const nameExists = orders.some((order) => order.name === name && order.size === size);
     
     if (!nameExists) {
         
       setOrders([...orders, { name, cost, id, size, path, quantity }]);
     } else {
       setOrders(orders.map((order) => 
-        order.name === name 
+        order.name === name && order.size ===size 
           ? { ...order, quantity: order.quantity + 1 }
           : order
       ));
     }
-    console.log(orders)
-  };
+   };
 return(
     <div>
     <AppContext.Provider value={{orders,setOrders,onAddToOrder}}>
