@@ -3,7 +3,7 @@ import '../styles/Orders_styles.css';
 import '../components/components-styles/Header_styles.css';
 import '../components/components-styles/btn.css';
 
-function LoginMessage(){
+const LoginMessage  =() =>{
 return(
     <div className="messageLogin">
           <p className='ops'>Ops! Para finalizar o seu pedido, você deve entrar na sua conta!</p>
