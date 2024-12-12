@@ -1,0 +1,218 @@
+/* Footer.css */
+.footer {
+    background-color: #c12f28;  /* Cor de fundo vermelha */
+    color: white;           /* Cor do texto branca */
+    text-align: center;     /* Centraliza o texto */
+    padding: 52px 0;        /* Espaçamento interno no topo e embaixo */
+    width: 100%;            /* Faz com que o footer ocupe toda a largura */
+    font-size: 20px;        /* Tamanho da fonte */
+    /* Sem 'position: fixed', footer não será fixado ao fundo */
+  }
+ 
+  .Logomarca {
+    position: absolute;     /* Permite mover a imagem de maneira livre dentro do footer */
+    top: 3210.5px;             /* Move a imagem 10px para cima  top: 3445px; */
+    left: 8px;            /* Move a imagem 20px para a esquerda */
+           /* Ajusta a altura da imagem automaticamente */
+  }
+ 
+  .retangulop {
+    position: absolute;
+    background-color: black;  /* Cor de fundo preta */
+    width: 100%;               /* Ocupa toda a largura do footer */
+    text-align: center;        /* Centraliza o texto */
+    padding: 10px 0;           /* Espaçamento interno para o texto */
+    top: 471%;
+  }
+ 
+  .retangulop p {
+    color: white;              /* Cor do texto branca */
+    font-size: 17px;           /* Tamanho da fonte */
+    margin: 0;                 /* Remove a margem padrão do p */
+  }
+ 
+  .Retangulo {
+    position: absolute;     /* Permite mover a imagem de maneira livre dentro do footer */
+    top: 445.5%;             /* Move a imagem 10px para cima  top: 3445px; */
+    left: 21.75%;            /* Move a imagem 20px para a esquerda */
+           /* Ajusta a altura da imagem automaticamente */
+  }
+ 
+  .Group {
+    position: absolute;     /* Permite mover a imagem de maneira livre dentro do footer */
+    top: 450.4%;             /* Move a imagem 10px para cima  top: 3445px; */
+    left: 28.4%;            /* Move a imagem 20px para a esquerda */
+           /* Ajusta a altura da imagem automaticamente */
+  }
+ 
+  .Vector {
+    position: absolute;     /* Permite mover a imagem de maneira livre dentro do footer */
+    top: 444.4%;             /* Move a imagem 10px para cima  top: 3445px; */
+    left: 28.2%;            /* Move a imagem 20px para a esquerda */
+           /* Ajusta a altura da imagem automaticamente */
+  }
+ 
+  .Vector1 {
+    position: absolute;     /* Permite mover a imagem de maneira livre dentro do footer */
+    top: 456.4%;             /* Move a imagem 10px para cima  top: 3445px; */
+    left: 28.2%;            /* Move a imagem 20px para a esquerda */
+           /* Ajusta a altura da imagem automaticamente */
+  }
+ 
+  .Vector2 {
+    position: absolute;     /* Permite mover a imagem de maneira livre dentro do footer */
+    top: 462.72%;             /* Move a imagem 10px para cima  top: 3445px; */
+    left: 28.06%;            /* Move a imagem 20px para a esquerda */
+           /* Ajusta a altura da imagem automaticamente */
+  }
+ 
+  .Vector3 {
+    position: absolute;     /* Permite mover a imagem de maneira livre dentro do footer */
+    top: 350.6%;             /* Move a imagem 10px para cima  top: 3445px; */
+    left: 40.6%;            /* Move a imagem 20px para a esquerda */
+           /* Ajusta a altura da imagem automaticamente */
+  }
+ 
+  .Cardapio {
+    position: absolute;         /* Permite mover o texto livremente */
+    top: 443.3%;                 /* Move o texto para cima */
+    right: 9.8%;                /* Move o texto para a direita */
+  }
+ 
+  .Cardapio a {
+    color: white;                /* Cor do link branca */
+    font-size: 14px;              /* Diminuindo o tamanho da fonte */
+    text-decoration: none;       /* Remove o sublinhado do link */
+    display: inline-block;       /* Para o link ser um bloco */
+  }
+ 
+  .Cardapio a:hover {
+    text-decoration: underline;  /* Adiciona sublinhado ao passar o mouse */
+  }
+ 
+  .Insta a {
+    color: white;                /* Cor do link branca */
+    font-size: 14px;              /* Tamanho da fonte */
+    text-decoration: none;       /* Remove o sublinhado do link */
+    display: inline-block;       /* Para o link ser um bloco */
+    position: relative;          /* Permite o ajuste da posição */
+    top: -18.3px;                   /* Mover o texto 5px para cima */
+    right: 212px;                 /* Mover o texto 10px para a direita */
+  }
+ 
+  .Insta a:hover {
+    text-decoration: underline;  /* Adiciona sublinhado ao passar o mouse */
+  }
+  .ContatoNumero {
+    position: relative;  /* Faz o texto ser posicionado de maneira relativa ao seu local original */
+    top: 3px;           /* Move o texto 20px para baixo */
+    left: -230.5px;         /* Move o texto 30px para a esquerda */
+    font-size: 14px;     /* Tamanho da fonte */
+   
+  }
+
+  .Ifood {
+    position: relative;  /* Faz o texto ser posicionado de maneira relativa ao seu local original */
+    top: 24.5px;           /* Move o texto 20px para baixo */
+    left: -208.5px;         /* Move o texto 30px para a esquerda */
+    font-size: 14px;     /* Tamanho da fonte */
+   
+  }
+
+  .Rappi {
+    position: relative;  /* Faz o texto ser posicionado de maneira relativa ao seu local original */
+    top: 44.4px;           /* Move o texto 20px para baixo */
+    left: -208.5px;         /* Move o texto 30px para a esquerda */
+    font-size: 14px;     /* Tamanho da fonte */
+   
+  }
+
+  .Retangulo1 {
+    position: absolute;     /* Permite mover a imagem de maneira livre dentro do footer */
+    top: 445.2%;             /* Move a imagem 10px para cima  top: 3445px; */
+    left: 47.9%;            /* Move a imagem 20px para a esquerda */
+           /* Ajusta a altura da imagem automaticamente */
+  }
+
+  .Endereco {
+    position: relative;  /* Faz o texto ser posicionado de maneira relativa ao seu local original */
+    top: -105px;           /* Move o texto 20px para baixo */
+    left: 810.5px;         /* Move o texto 30px para a esquerda */
+    font-size: 14px;     /* Tamanho da fonte */
+    max-width: 330px;
+   
+  }
+
+  .Local {
+    position: relative;  /* Faz o texto ser posicionado de maneira relativa ao seu local original */
+    top: -83px;           /* Move o texto 20px para baixo */
+    left: 125.6px;         /* Move o texto 30px para a esquerda */
+    font-size: 14px;     /* Tamanho da fonte */
+   
+  }
+
+  .CEP {
+    position: relative;  /* Faz o texto ser posicionado de maneira relativa ao seu local original */
+    top: -60px;           /* Move o texto 20px para baixo */
+    left: 108.52px;         /* Move o texto 30px para a esquerda */
+    font-size: 14px;     /* Tamanho da fonte */
+   
+  }
+
+  .Retangulo2 {
+    position: absolute;     /* Permite mover a imagem de maneira livre dentro do footer */
+    top: 445.2%;             /* Move a imagem 10px para cima  top: 3445px; */
+    left: 80.5%;            /* Move a imagem 20px para a esquerda */
+           /* Ajusta a altura da imagem automaticamente */
+  }
+
+  .Contato {
+    position: absolute;         /* Permite mover o texto livremente */
+    top: 448.3%;                 /* Move o texto para cima */
+    right: 10.39%;                /* Move o texto para a direita */
+  }
+ 
+  .Contato a {
+    color: white;                /* Cor do link branca */
+    font-size: 14px;              /* Diminuindo o tamanho da fonte */
+    text-decoration: none;       /* Remove o sublinhado do link */
+    display: inline-block;       /* Para o link ser um bloco */
+  }
+ 
+  .Contato a:hover {
+    text-decoration: underline;  /* Adiciona sublinhado ao passar o mouse */
+  }
+
+  .SobreNos {
+    position: absolute;         /* Permite mover o texto livremente */
+    top: 452.9%;                 /* Move o texto para cima */
+    right: 9.55%;                /* Move o texto para a direita */
+  }
+ 
+  .SobreNos a {
+    color: white;                /* Cor do link branca */
+    font-size: 14px;              /* Diminuindo o tamanho da fonte */
+    text-decoration: none;       /* Remove o sublinhado do link */
+    display: inline-block;       /* Para o link ser um bloco */
+  }
+ 
+  .SobreNos a:hover {
+    text-decoration: underline;  /* Adiciona sublinhado ao passar o mouse */
+  }
+
+  .Pedidos {
+    position: absolute;         /* Permite mover o texto livremente */
+    top: 457.3%;                 /* Move o texto para cima */
+    right: 10.4%;                /* Move o texto para a direita */
+  }
+ 
+  .Pedidos a {
+    color: white;                /* Cor do link branca */
+    font-size: 14px;              /* Diminuindo o tamanho da fonte */
+    text-decoration: none;       /* Remove o sublinhado do link */
+    display: inline-block;       /* Para o link ser um bloco */
+  }
+ 
+  .Pedidos a:hover {
+    text-decoration: underline;  /* Adiciona sublinhado ao passar o mouse */
+  }

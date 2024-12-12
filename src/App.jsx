@@ -31,8 +31,8 @@ return(
         <Router>
         <Routes>       
             <Route path="/" element={<Home/>}/>
-            <Route path="/LoginRegister" element={<LoginRegister/>}/>
-            <Route path="/Orders" element={<Orders/>}/>
+            <Route path="/Login-registro" element={<LoginRegister/>}/>
+            <Route path="/Pedidos" element={<Orders/>}/>
             <Route path="/DishCard" element={<DishCard />}/>
         </Routes>
      </Router>

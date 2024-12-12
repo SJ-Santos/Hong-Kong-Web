@@ -13,11 +13,11 @@ function Header() {
   const userIn = localStorage.getItem('token') ? true : false;
 
   const GoToLogin = () => {
-    navigate('/LoginRegister');
+    navigate('/Login-registro');
   };
 
   const GoToOrders = () => {
-    navigate('/Orders', { state: { orders } });
+    navigate('/Pedidos', { state: { orders } });
   };
 
   const GoToHome = () => {
