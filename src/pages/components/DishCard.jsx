@@ -12,8 +12,12 @@ function DishCard({ name, cost, id, path,quantity}) {
   const handleSizeChange = (event) => {
     setSize(event.target.value); // Atualiza o estado do tamanho
   };
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Atualiza o estado do tamanho
+  };
   return (
-    <div className="dishes-all">
+    <div >
+      <form className="dishes-all" onSubmit={handleSubmit}>
       <img id="dish_photo" src={path} alt={name} /> {/* A imagem vem via prop */}
       <h3 className="dish_name">{name}</h3>
       <p className="cost">{cost}</p>
@@ -44,6 +48,7 @@ function DishCard({ name, cost, id, path,quantity}) {
         <img src={carrinho} alt="Adicionar ao carrinho" />
         ADICIONAR
       </button>
+      </form>
     </div>
   );
 }
