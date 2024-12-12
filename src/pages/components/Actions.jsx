@@ -1,5 +1,5 @@
 import React, { useState,useContext } from 'react';
-import { AppContext } from '.../App';
+import { AppContext } from '../../App';
 import '../styles/Orders_styles.css';
 import './components-styles/Header_styles.css';
 import './components-styles/btn.css';
@@ -12,6 +12,7 @@ function Actions (){
    const [showText, setShowText] = useState(false);
    const [showEnd, setShowEnd] = useState(false);
    const userIn = false;
+   
    const handleButton = ()=>{
         setColor('block')
         if (userIn){
