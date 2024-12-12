@@ -18,11 +18,9 @@ const OrderCard =({id,name, path,quantity,size}) =>{
     };
     
     const handleDelete = (id) => {
-        console.log('TESTE 1:')
-        console.log(orders)
+        
         const update = orders.filter((_, i) => id !== i );
-        console.log('TERMINADO:')
-        console.log(update+'\n')
+        
         setOrders(update);
     }
      // Evita valores negativos
