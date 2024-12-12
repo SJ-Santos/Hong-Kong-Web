@@ -6,6 +6,8 @@ import HONG from "./assets/icons/HONG.svg";
 import KONG from "./assets/icons/KONG.svg";
 import yakisoba from "./assets/icons/yakisoba_animation.svg"
 import { useNavigate } from "react-router-dom";
+import { auth } from "../config/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 
 
@@ -99,6 +101,12 @@ const RegisterForm = ({ setShowRegister }) => (
 
 // Componente de formulário de login
 const LoginForm = ({ setShowRegister }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const SignIn = async () => {
+    //await createUserWithEmailAndPassword(auth, email, password)
+  };
   const navigate = useNavigate();
   const GoToHome = () => {
     navigate("/");
@@ -108,11 +116,15 @@ const LoginForm = ({ setShowRegister }) => {
     <div className="container-email-senha">
       <div className="email">
         <label htmlFor="usuario">Email</label>
-        <input type="text" id="usuario" placeholder="email@email.com" />
+        <input type="text" id="usuario" placeholder="email@email.com" 
+        onChange={(e) => setEmail(e.target.value)}
+        />
       </div>
       <div className="senha">
         <label htmlFor="usuario">Senha</label>
-        <input type="password" id="usuario" placeholder="senha" />
+        <input type="password" id="usuario" placeholder="senha" 
+        onChange={(e) => setPassword(e.target.value)}
+        />
       </div>
     </div>
 
@@ -126,7 +138,7 @@ const LoginForm = ({ setShowRegister }) => {
       </a>
     </div>
 
-    <button id="button-entrar" onClick={GoToHome} >Entrar</button>
+    <button id="button-entrar" onClick={SignIn} >Entrar</button>
 
     <div className="linha-com-texto">
       <span>ou</span>
