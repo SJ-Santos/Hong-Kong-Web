@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import Header from './components/Header';
 import DishCard from './components/DishCard';
 import Sobrenos from './components/AboutUs';
+import Footer from './components/Footer';
 import { useNavigate } from 'react-router-dom';
 import dishes from './dishes.json'
 import './styles/Home_styles.css';
@@ -51,6 +52,8 @@ function Home() {
         </section>
         <section id="about"></section>
         <Sobrenos />
+        <Footer />
+        
       </main>
     </div>
   );
