@@ -25,26 +25,13 @@ const Orders = () => {
   const [showEnd, setShowEnd] = useState(false);
   const [color, setColor] = useState('none');
   
-  const handleButton = ()=>{
-        setColor('block')
-        if (userIn){
-          setShowEnd(true)
+  const enter = ()=>{
+    setColor('block')
+    userIn? setShowEnd(false): setShowText(false);
         }
-        else{
-          
-        setShowText(true)
-
-        }
-        }
-const exit =()=>{
-  setColor('none')
-  if(userIn){
-    setShowEnd(false)
-    
-  }
-  else{
-  setShowText(false)
-  }
+  const exit =()=>{
+     setColor('none')
+     userIn? setShowEnd(false): setShowText(false);
 }
   return (
     <div>
