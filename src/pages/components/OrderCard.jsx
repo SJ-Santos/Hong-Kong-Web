@@ -9,14 +9,26 @@ const OrderCard =({name, path,quantity,size}) =>{
           ? { ...order, quantity: order.quantity + 1 }
           : order
       ));};
-    const decreaseQuantity = () => setQuantity(quant > 1 ? quant - 1 : 1); // Evita valores negativos
+    const decreaseQuantity = () =>{ setQuantity(quant > 1 ? quant - 1 : 1)
+      setOrders(orders.map((order) => 
+        order.name === name 
+          ? { ...order, quantity: order.quantity > 1? order.quantity - 1 : 1 }
+          : order
+      ));
+    };
+    
+    const handleDelete = (name) => {
+        const update = orders.filter((order) => order.name !== name);
+        setOrders(update);
+    }
+     // Evita valores negativos
     const {orders,setOrders} = useContext(AppContext);
 
 
     return(
         <>
             <div className="card">
-            <button id="remove">
+            <button id="remove" onClick={()=>handleDelete(name)}>
               <span>&times;</span>
             </button>
 

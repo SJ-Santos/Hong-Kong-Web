@@ -12,6 +12,7 @@ import './styles/Orders_styles.css'
 import { AppContext } from '../App';
 const Orders = () => {
   const navigate = useNavigate(); 
+  const goToHome = () => navigate('/');
   const goToLogin = () => navigate('/LoginRegister');
   const {orders} = useContext(AppContext);
   //Serve para dizer se o usuario está dentro ou não
@@ -21,26 +22,15 @@ const Orders = () => {
   const [showEnd, setShowEnd] = useState(false);
   const [color, setColor] = useState('none');
   
-  const handleButton = ()=>{
+  const enter = ()=>{
         setColor('block')
-        if (userIn){
-          setShowEnd(true)
-        }
-        else{
-          
-        setShowText(true)
+        userIn? setShowEnd(true): setShowText(true);
 
-        }
         }
 const exit =()=>{
   setColor('none')
-  if(userIn){
-    setShowEnd(false)
-    
-  }
-  else{
-  setShowText(false)
-  }
+  userIn? setShowEnd(false): setShowText(false);
+  
 }
   return (
     <div>
@@ -73,7 +63,7 @@ const exit =()=>{
               <p>ou</p>
               <span className='line2'></span>
             </div>
-            <div className='continueOrder'>
+            <div className='continueOrder' onClick={goToHome}>
               <img src={whiteCart} alt="Simbolo de carrinho de compras" />
               Continuar comprando
             </div>
