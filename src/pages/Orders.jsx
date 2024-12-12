@@ -38,10 +38,10 @@ const exit =()=>{
       <div >
       <Header/>
         <div className="container">
-         { orders.map((order)=>
+         { orders.map((order,i)=>
          
          <OrderCard 
-          key={order.id}
+          key={i}
           name={order.name}
           path={order.path}
           quantity={order.quantity} 
