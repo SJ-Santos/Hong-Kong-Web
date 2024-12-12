@@ -52,7 +52,7 @@ const exit =()=>{
             </div>
           <div className="actions">
             <button
-              onClick={handleButton}
+              onClick={enter}
               className='finishOrder'
             >
               <img src={Correct} alt="Simbolo de correto" />
