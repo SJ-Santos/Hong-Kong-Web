@@ -1,3 +1,5 @@
+import React, { useState,useContext } from 'react';
+import { AppContext } from '.../App';
 import '../styles/Orders_styles.css';
 import './components-styles/Header_styles.css';
 import './components-styles/btn.css';
@@ -5,7 +7,12 @@ import Correct from '../assets/icons/correct.svg';
 import whiteCart from '../assets/icons/whiteCart.svg';
 
 function Actions (){
-    const handleButton = ()=>{
+  const {orders} = useContext(AppContext);
+   const [color, setColor] = useState('none');
+   const [showText, setShowText] = useState(false);
+   const [showEnd, setShowEnd] = useState(false);
+   const userIn = false;
+   const handleButton = ()=>{
         setColor('block')
         if (userIn){
           setShowEnd(true)

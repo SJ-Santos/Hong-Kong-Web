@@ -9,9 +9,6 @@ import LoginMessage from './components/LoginMessage';
 import Actions from './components/Actions';
 import ThankYou from './components/ThankYou';
 import OrderTotal from './components/OrderTotal';
-import Correct from './assets/icons/correct.svg';
-import whiteCart from './assets/icons/whiteCart.svg';
-import './styles/Orders_styles.css'
 import { AppContext } from '../App';
 
 const Orders = () => {

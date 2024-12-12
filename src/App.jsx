@@ -2,7 +2,7 @@ import { createContext, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import LoginRegister from './pages/LoginRegister';
-import Orders from './pages/orders';
+import Orders from './pages/Orders';
 import DishCard from './pages/components/DishCard';
 export const AppContext = createContext();
 
