@@ -1,12 +1,12 @@
 import React from 'react';
 import './components-styles/Footer_styles.css';
-import Logomarca from '../assets/icons/Logomarca.png';
-import Retangulo from '../assets/icons/Rectangle.png';
-import Group from '../assets/icons/Group.png';
-import Vector from '../assets/icons/Vector.png';
-import Vector1 from '../assets/icons/Vector1.png';
-import Vector2 from '../assets/icons/Vector2.png';
-import Vector3 from '../assets/icons/Vector3.png';
+
+//imagens:
+import Logomarca from '../assets/icons/Logomarca2.svg';
+import Telefone from '../assets/icons/Telefone.svg';
+import Instagram from '../assets/icons/Instagram.svg';
+import Ifood from '../assets/icons/Ifood.svg';
+import Rappi from '../assets/icons/Rappi.svg';
 import { useNavigate } from 'react-router-dom';
  
 function Footer  ()  {
@@ -16,44 +16,47 @@ function Footer  ()  {
       };
   return (
     <footer className="footer">
-      <img src={Logomarca} alt="Footer" className="Logomarca" />
-      <div className="retangulop">
-        <p>Copyright 2024  |  Desenvolvido por...</p>
+      {/* lOGO */}
+      <img src={Logomarca} alt="Logo marca do HongKong Restaurante" className="Logomarca" />
+      <div className="retangulo"></div>
+      <div className='iconsFooter'>
+      <div className="insta">
+      <img src={Instagram} alt="Icone de Instagram" className="Instagram" />
+      <a href="https://www.instagram.com/hongkongrestaurante_/" target="_blank">hongkongrestaurante_</a>
       </div>
-      <img src={Retangulo} alt="Footer" className="Retangulo" />
-      <img src={Group} alt="Footer" className="Group" />
-      <img src={Vector} alt="Footer" className="Vector" />
-      <img src={Vector1} alt="Footer" className="Vector1" />
-      <img src={Vector2} alt="Footer" className="Vector2" />
-      <img src={Vector3} alt="Footer" className="Vector3" />
-      <div className="Cardapio">
-        <a href="#menu">Cardápio</a>
-      </div>
-      <div className="Insta">
-        <a href="https://www.instagram.com/hongkongrestaurante_/" target="_blank" rel="noopener noreferrer">
-          hongkongrestaurante_
-        </a>
-      </div>
+      <div className="tele">
+      <img src={Telefone} alt="Icone de telefone" className="Telefone" />
       <p className="ContatoNumero">+55 81 996300660</p>
-      <p className="Ifood">Hong Kong Restaurante</p>
-      <p className="Rappi">Hong Kong Restaurante</p>
-      <img src={Retangulo} alt="Footer" className="Retangulo1" />
+      </div>
+      <div className="food">
+      <img src={Ifood} alt="Icone de Ifood" className="Ifood" />
+      <p className="ContatoIfood">Hong Kong Restaurante</p>
+      </div>
+      <div className="rap">
+      <img src={Rappi} alt="Icone de Rappi" className="Rappi" />
+      <p className="ContatoRappi">Hong Kong Restaurante</p>
+      </div>
+      </div>
+      
+      <div className="retangulo1"></div>
+      <div className='Locais'>
       <p className="Endereco">Rua Bernardo Guimarães, n° 415, Santo Amaro - Recife/PE</p>
       <p className="Local">Rua do Lazer, Box 15</p>
       <p className="CEP">CEP 50050440</p>
-      <img src={Retangulo} alt="Footer" className="Retangulo2" />
-      <div className="Contato">
+      </div>
+        
+      <div className="retangulo2"></div>
+        <div className="shorts">
+        <a href="#menu">Cardápio</a>
         <a href="#contact">Contato</a>
-      </div>
-      <div className="SobreNos">
         <a href="#about">Sobre nós</a>
-      </div>
-      <div className="Pedidos">
-      <a href="">Pedidos</a>
+        <p>Pedidos</p>
+        </div>
 
-      </div>
       
-    
+      <div className="copyright"> 
+        <p > &copy; Copyright 2024  |  Desenvolvido por Alunos</p>
+      </div>
     </footer>
   );
 };
